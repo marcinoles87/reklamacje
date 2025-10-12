@@ -11,6 +11,7 @@ function App() {
   const [żadanie , setŻadanie] = useState('')
   const [filia , setFilia] = useState('')
   const [paragon , setParagon ] = useState('')
+  const [sprzedawca , setSprzedawca] = useState('')
 
 
 
@@ -18,11 +19,12 @@ function App() {
     <div className="App">
       <h1>Wniosek do zgłoszenia reklamacyjnego</h1>
 
-      <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon}></DaneFirmy>
+      <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
 
       <div className='sprawdzdenie'>
         <p>Filia :{filia}</p>
         <p>Paragon : {paragon}</p>
+        <p>Sprzedający : {sprzedawca}</p>
       </div>
       
       
