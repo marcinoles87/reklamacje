@@ -16,9 +16,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Wniosek do zgloszenia reklamacyjnego</h1>
+      <h1>Wniosek do zgłoszenia reklamacyjnego</h1>
 
       <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon}></DaneFirmy>
+
+      <div className='sprawdzdenie'>
+        <p>Filia :{filia}</p>
+        <p>Paragon : {paragon}</p>
+      </div>
+      
       
     </div>
   );

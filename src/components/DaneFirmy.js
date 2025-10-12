@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 
-function DaneFirmy ({filia,setFilia,paragon,SetParagon}) {
+function DaneFirmy ({filia,setFilia,paragon,setParagon}) {
     console.log(filia)
 
      const [data , setData ] = useState('')
@@ -14,7 +14,7 @@ function DaneFirmy ({filia,setFilia,paragon,SetParagon}) {
         <h2>Dane firmy : </h2>
         <p>Megapunkt 500 sp z o.o sklep / filia : <input type="text" onChange={ (e) => setFilia(e.target.value)}></input></p>
         <p>Wniosek sporządzono dnia : {dataZgloszenia}</p>
-        <p>Paragon nr : <input type='text' onChange={ (e) =>SetParagon(e.target.value)}></input></p>
+        <p>Paragon nr : <input type='text' onChange={ (e) =>setParagon(e.target.value)}></input></p>
 
 
     </div>
