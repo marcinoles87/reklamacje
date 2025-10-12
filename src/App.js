@@ -24,7 +24,7 @@ function App() {
       <div className='sprawdzdenie'>
         <p>Filia :{filia}</p>
         <p>Paragon : {paragon}</p>
-        <p>Sprzedający : {sprzedawca}</p>
+        <p>Sporządził : {sprzedawca}</p>
       </div>
       
       
