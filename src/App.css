@@ -17,3 +17,10 @@
   flex-direction: column;
   margin: 30px;
 }
+
+.reklamacja-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

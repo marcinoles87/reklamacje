@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import DaneFirmy from './components/DaneFirmy';
+import DaneProduktu from './components/DaneProduktu';
 
 function App() {
 
@@ -12,6 +13,9 @@ function App() {
   const [filia , setFilia] = useState('')
   const [paragon , setParagon ] = useState('')
   const [sprzedawca , setSprzedawca] = useState('')
+  const [kod , setKod] = useState('')
+  const [nazwa , setNazwa] = useState('')
+  const [opis , setOpis] = useState('')
 
 
 
@@ -20,6 +24,7 @@ function App() {
       <h1>Wniosek do zgłoszenia reklamacyjnego</h1>
 
       <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
+      <DaneProduktu kod={kod} nazwa={nazwa} opis={opis}></DaneProduktu>
 
       <div className='sprawdzdenie'>
         <p>Filia :{filia}</p>
