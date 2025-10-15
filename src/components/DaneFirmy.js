@@ -7,7 +7,7 @@ function DaneFirmy ({filia,setFilia,paragon,setParagon,sprzedawca,setSprzedawca}
      const [data , setData ] = useState('')
 
     const dataDzis = new Date()
-    const dataZgloszenia = `${dataDzis.getDate()}.${dataDzis.getMonth()}.${dataDzis.getFullYear()}}`
+    const dataZgloszenia = `${dataDzis.getDate()}.${dataDzis.getMonth()}.${dataDzis.getFullYear()}`
     
   return (
     <div className='dane-firmy'>

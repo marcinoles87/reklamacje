@@ -2,11 +2,13 @@ import { useState } from 'react';
 import './App.css';
 import DaneFirmy from './components/DaneFirmy';
 import DaneProduktu from './components/DaneProduktu';
+import DaneZglaszajacego from './components/DaneZglaszajacego';
 
 function App() {
 
   const [daneFirmy , setDaneFirmy] = useState('')
   const [daneZglaszajacego , setDaneZglaszajacego] = useState('')
+  const [emailZglaszajacego , setEmailZglaszajacego] = useState('')
   const [towar , setTowar] = useState('')
   const [zgloszenie , setZgloszenie] = useState('')
   const [żadanie , setŻadanie] = useState('')
@@ -25,6 +27,7 @@ function App() {
 
       <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
       <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis}></DaneProduktu>
+      <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego}></DaneZglaszajacego>
 
 
 
