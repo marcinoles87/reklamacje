@@ -25,11 +25,14 @@ function App() {
     <div className="App">
       <h1>Wniosek do zgłoszenia reklamacyjnego</h1>
 
-      <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
-      <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego}></DaneZglaszajacego>
+      <div className='dane-kontaktowe'>
+              <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
+              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego}></DaneZglaszajacego>
+              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis}></DaneProduktu>
+
+      </div>
 
       <div className='dane-reklamacji'>
-              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis}></DaneProduktu>
 
       </div>
 
