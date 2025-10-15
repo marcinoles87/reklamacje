@@ -18,11 +18,17 @@
   margin: 30px;
 }
 
+.dane-reklamacji{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .reklamacja-container , .zglaszajacy-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  margin: 20px;
 }
 
 input{
@@ -30,6 +36,13 @@ input{
   padding: 5px;
   border-radius: 10px;
   transition: 0.8s ease;
+}
+
+textarea{
+  border-radius: 10px;
+  padding: 10px;
+  width: 20vw;
+  height: 200px;
 }
 
 input:hover{
