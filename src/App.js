@@ -24,10 +24,14 @@ function App() {
 
   return (
     <div className="App">
+
+      <div className='dane'>
       <h1>MEGAPUNKT 500</h1>
-      <h2>FORMULARZ REKLMACYJNY</h2>
+      <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być wyczyszczony bez resztek jedzenia / napojów .</p>
+      </div>
+
 
   
               <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
