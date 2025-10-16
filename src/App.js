@@ -18,23 +18,25 @@ function App() {
   const [kod , setKod] = useState('')
   const [nazwa , setNazwa] = useState('')
   const [opis , setOpis] = useState('')
+  const [tel , setTelefon] = useState('')
 
 
 
   return (
     <div className="App">
-      <h1>Wniosek do zgłoszenia reklamacyjnego</h1>
+      <h1>MEGAPUNKT 500</h1>
+      <h2>FORMULARZ REKLMACYJNY</h2>
+      <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
+      <p>Produkt powinien być wyczyszczony bez resztek jedzenia / napojów .</p>
 
-      <div className='dane-kontaktowe'>
+  
               <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
-              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego}></DaneZglaszajacego>
+              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis}></DaneProduktu>
 
-      </div>
+    
 
-      <div className='dane-reklamacji'>
-
-      </div>
+     
 
 
 

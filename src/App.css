@@ -4,12 +4,14 @@
   box-sizing: border-box;
 }
 
+:root{
+  --main-color : rgb(32, 130, 32);
+}
+
 .App{
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: left;
 }
 
 .sprawdzenie{
@@ -18,10 +20,14 @@
   margin: 30px;
 }
 
-.dane-firmy{
-  
-}
 
+.dane-firmy h2{
+  padding: 10px;
+  padding-left: 30px;
+  background-color: var(--main-color);
+  text-transform: uppercase;
+   
+}
 .dane-reklamacji{
   display: flex;
   flex-direction: row;
