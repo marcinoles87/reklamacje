@@ -12,6 +12,8 @@
   display: flex;
   flex-direction: column;
   align-items: left;
+  text-transform: uppercase;
+  
 }
 
 .sprawdzenie{
@@ -28,17 +30,18 @@
   text-transform: uppercase;
    
 }
-.dane-reklamacji{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
 
-.reklamacja-container , .zglaszajacy-container {
+.dane-firmy{
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
+
+.dane-firmy p{
+  padding-left: 30px
+}
+
+
+
 
 input{
   margin: 10px;
@@ -60,9 +63,3 @@ input:hover{
   border: 2px solid rgb(28, 255, 85);
 }
 
-.dane-kontaktowe{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 50px;
-}
