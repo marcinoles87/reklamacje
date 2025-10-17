@@ -58,6 +58,21 @@ input{
   transition: 0.8s ease;
 }
 
+button{
+  width: max-content;
+  padding: 10px;
+  background-color: rgb(49, 49, 245);
+  color:white;
+  border: none;
+  border-radius: 10px;
+  margin: 10px;
+  transition: 0.6s ease;
+}
+
+button:hover{
+  background-color: rgb(0, 0, 134);
+}
+
 textarea{
   border-radius: 10px;
   padding: 10px;

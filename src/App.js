@@ -19,14 +19,31 @@ function App() {
   const [nazwa , setNazwa] = useState('')
   const [opis , setOpis] = useState('')
   const [tel , setTelefon] = useState('')
+  const [wyglad , setWyglad] = useState('')
+  const [zakup , setZakup] = useState('')
 
 
+  const handleSend = () => {
+    alert(`
+      
+      Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
+      Filia : ${filia}
+      Podpisał : ${sprzedawca}
+
+      Osoba zglaszająca : ${daneZglaszajacego}
+      Email / Telefon : ${tel} / ${emailZglaszajacego}
+      Opis reklamacji : ${opis}
+      Opis oddanego przedmiotu : ${wyglad}
+
+
+      `)
+  }
 
   return (
     <div className="App">
 
       <div className='dane'>
-      <h1>MEGAPUNKT 500</h1>
+      <h1>MEGAPUNKT 500.pl</h1>
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być wyczyszczony bez resztek jedzenia / napojów .</p>
@@ -36,14 +53,16 @@ function App() {
   
               <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon}></DaneZglaszajacego>
-              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis}></DaneProduktu>
+              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
+
+              <button onClick={handleSend}>Wyślij zgłoszenie</button>
 
     
 
      
 
 
-
+{/* 
       <div className='sprawdzdenie'>
         <p>Filia :{filia}</p>
         <p>Paragon : {paragon}</p>
@@ -51,7 +70,7 @@ function App() {
         <p>Kod : {kod}</p>
         <p>Nazwa : {nazwa}</p>
         <p>Opis wady : {opis}</p>
-      </div>
+      </div> */}
       
       
     </div>
