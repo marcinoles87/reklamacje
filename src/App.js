@@ -4,6 +4,8 @@ import DaneFirmy from './components/DaneFirmy';
 import DaneProduktu from './components/DaneProduktu';
 import DaneZglaszajacego from './components/DaneZglaszajacego';
 
+import logo from './components/img/logoMp.jpg'
+
 function App() {
 
   const [daneFirmy , setDaneFirmy] = useState('')
@@ -21,6 +23,8 @@ function App() {
   const [tel , setTelefon] = useState('')
   const [wyglad , setWyglad] = useState('')
   const [zakup , setZakup] = useState('')
+
+
 
 
   const handleSend = () => {
@@ -43,7 +47,7 @@ function App() {
     <div className="App">
 
       <div className='dane'>
-      <h1>MEGAPUNKT 500.pl</h1>
+      <img src={logo} alt=""></img>
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być wyczyszczony bez resztek jedzenia / napojów .</p>
