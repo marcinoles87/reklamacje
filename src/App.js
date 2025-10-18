@@ -33,6 +33,7 @@ function App() {
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
+      
       Filia : ${filia}
       Podpisał : ${sprzedawca}
 
