@@ -33,7 +33,7 @@ function App() {
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
-      
+
       Filia : ${filia}
       Podpisał : ${sprzedawca}
 
@@ -53,7 +53,7 @@ function App() {
       <img src={logo} alt=""></img>
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
-      <p>Produkt powinien być wyczyszczony bez resztek jedzenia / napojów .</p>
+      <p>Produkt powinien być względnie wyczyszczony , bez resztek jedzenia / napojów .</p>
       </div>
 
 
