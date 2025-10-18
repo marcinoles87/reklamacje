@@ -28,6 +28,8 @@ function App() {
 
 
   const handleSend = () => {
+
+    console.log(tel)
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
@@ -35,7 +37,7 @@ function App() {
       Podpisał : ${sprzedawca}
 
       Osoba zglaszająca : ${daneZglaszajacego}
-      Email / Telefon : ${tel} / ${emailZglaszajacego}
+      Email : ${emailZglaszajacego} / Telefon : ${tel}
       Opis reklamacji : ${opis}
       Opis oddanego przedmiotu : ${wyglad}
 

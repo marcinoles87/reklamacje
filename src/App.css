@@ -58,8 +58,9 @@ img{
 input{
   margin: 10px;
   padding: 5px;
-  border-radius: 10px;
   transition: 0.8s ease;
+  border:none;
+  border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 button{
@@ -85,8 +86,7 @@ textarea{
 }
 
 input:hover{
-  background-color: gray;
+  background-color: rgb(89, 89, 89);
   color:white;
-  border: 2px solid rgb(28, 255, 85);
 }
 
