@@ -42,6 +42,7 @@
 .dane-firmy{
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .dane-firmy p{
