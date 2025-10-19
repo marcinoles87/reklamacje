@@ -7,6 +7,21 @@ function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefo
       <p>Imie i nazwisko :<input type='text' placeholder='imie i nazwisko' onChange={ (e) => {setDaneZglaszajacego(e.target.value)}}></input></p>
       <p>Email :<input type='email' placeholder='email' onChange={ (e) => {setEmailZglaszajacego(e.target.value)}}></input></p>
       <p>Telefon : <input type='number' placeholder='telefon' onChange={ (e) => {setTelefon(e.target.value)}}></input></p>
+      <p>Żądanie :  
+
+        <label> Wymiana na nowy
+          <input type='checkbox'></input>
+        </label>
+
+        <label>Zwrot gotówki
+          <input type='checkbox'></input>
+        </label>
+
+        <label>Naprawa
+          <input type='checkbox'></input>
+        </label>
+
+      </p>
     </div>
   )
 }
