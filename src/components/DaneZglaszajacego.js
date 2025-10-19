@@ -10,15 +10,15 @@ function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefo
       <p>Żądanie :  
 
         <label> Wymiana na nowy
-          <input type='checkbox'></input>
+          <input type='checkbox' className='inputCheck'></input>
         </label>
 
         <label>Zwrot gotówki
-          <input type='checkbox'></input>
+          <input type='checkbox' className='inputCheck'></input>
         </label>
 
         <label>Naprawa
-          <input type='checkbox'></input>
+          <input type='checkbox' className='inputCheck'></input>
         </label>
 
       </p>
