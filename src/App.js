@@ -25,12 +25,12 @@ function App() {
   const [zakup , setZakup] = useState('')
   const [zadanie, setZadanie] = useState('')
 
-
+console.log(zadanie)
 
 
   const handleSend = () => {
 
-    console.log(tel)
+    console.log()
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
