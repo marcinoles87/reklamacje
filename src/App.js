@@ -23,6 +23,7 @@ function App() {
   const [tel , setTelefon] = useState('')
   const [wyglad , setWyglad] = useState('')
   const [zakup , setZakup] = useState('')
+  const [zadanie, setZadanie] = useState('')
 
 
 
@@ -41,6 +42,7 @@ function App() {
       Email : ${emailZglaszajacego} / Telefon : ${tel}
       Opis reklamacji : ${opis}
       Opis oddanego przedmiotu : ${wyglad}
+      Żądanie nabywcy : ${zadanie}
 
 
       `)
@@ -59,7 +61,7 @@ function App() {
 
   
               <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
-              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon}></DaneZglaszajacego>
+              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
 
               <button onClick={handleSend}>Wyślij zgłoszenie</button>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefon}) {
+function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefon,setZadanie}) {
   return (
     <div className='dane-firmy'>
       <h2>Aktualne dane kontaktowe klienta :</h2>
@@ -10,15 +10,15 @@ function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefo
       <p>Żądanie :  
 
         <label> Wymiana na nowy
-          <input type='checkbox' className='inputCheck'></input>
+          <input type='checkbox' className='inputCheck' onClick={ (e) => setZadanie(e.target.value)}></input>
         </label>
 
         <label>Zwrot gotówki
-          <input type='checkbox' className='inputCheck'></input>
+          <input type='checkbox' className='inputCheck' onClick={ (e) => setZadanie(e.target.value)}></input>
         </label>
 
         <label>Naprawa
-          <input type='checkbox' className='inputCheck'></input>
+          <input type='checkbox' className='inputCheck'  onClick={ (e) => setZadanie(e.target.value)}></input>
         </label>
 
       </p>
