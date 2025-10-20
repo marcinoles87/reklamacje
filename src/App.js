@@ -24,11 +24,21 @@ function App() {
   const [wyglad , setWyglad] = useState('')
   const [zakup , setZakup] = useState('')
   const [zadanie, setZadanie] = useState('')
+  const [numerReklamacji , setNumer] = useState(0)
 
-console.log(zadanie)
 
+  const setReklamacja = () => {
+   
+    setNumer( (prev) => {
+      return prev+1
+    })
+  }
+
+  
 
   const handleSend = () => {
+
+    setReklamacja()
 
     console.log()
     alert(`
@@ -56,6 +66,7 @@ console.log(zadanie)
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być względnie wyczyszczony , bez resztek jedzenia / napojów .</p>
+      <p>Reklamacja nr :{numerReklamacji} </p>
       </div>
 
 
