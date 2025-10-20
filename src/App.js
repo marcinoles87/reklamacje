@@ -66,7 +66,7 @@ function App() {
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być względnie wyczyszczony , bez resztek jedzenia / napojów .</p>
-      <p>Reklamacja nr :{numerReklamacji} </p>
+      <p>Reklamacja nr : {numerReklamacji} </p>
       </div>
 
 
