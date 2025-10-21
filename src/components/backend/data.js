@@ -28,3 +28,8 @@ app.delete('/' , (req,res) =>{
 app.get( '/' , (req,res) =>{
     console.log('pobrano')
 })
+
+
+app.listen(8081, () =>{
+    console.log('nasluchuje')
+})
