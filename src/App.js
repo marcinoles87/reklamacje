@@ -43,7 +43,7 @@ function App() {
     .then( res => {
       console.log(res)
     })
-    .catch( console.error('error');
+    .catch( err => console.log(err)
     )
 
     setReklamacja()
