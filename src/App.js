@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import axios from 'axios'
 import './App.css';
 import DaneFirmy from './components/DaneFirmy';
 import DaneProduktu from './components/DaneProduktu';
@@ -37,6 +38,13 @@ function App() {
   
 
   const handleSend = () => {
+
+    axios.get('http://localhost:8081')
+    .then( res => {
+      console.log(res)
+    })
+    .catch( console.error('error');
+    )
 
     setReklamacja()
 
