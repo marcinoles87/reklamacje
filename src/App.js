@@ -27,6 +27,8 @@ function App() {
   const [zadanie, setZadanie] = useState('')
   const [numerReklamacji , setNumer] = useState(0)
 
+  const [wszystkieDaneBazy , setDane] = useState([])
+ 
 
   const setReklamacja = () => {
    
@@ -41,7 +43,8 @@ function App() {
 
     axios.get('http://localhost:8081')
     .then( res => {
-      console.log(res)
+      console.log(res.data)
+    
     })
     .catch( err => console.log(err)
     )
@@ -53,6 +56,9 @@ function App() {
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
+            setDane(res.data)
+
+
     })
     .catch( err => console.log(err)
     )
@@ -95,6 +101,22 @@ function App() {
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
 
               <button onClick={handleSend}>Wyślij zgłoszenie</button>
+
+              <div>
+                <h1>Wszystkie reklamacje</h1>
+                {wszystkieDaneBazy.map( (item,index) =>{
+                  return(
+                    <div className='dane-container' key={index}>
+                      
+                      <p>Nazwa : {item.Nazwa}</p>
+                      <p>Data : {item.Data}</p>
+                      <p>Opis : {item.Opis}</p>
+                      <p>Cena: {item.Cena}</p>
+                    
+                    </div>
+                  )
+                })}
+              </div>
 
     
 

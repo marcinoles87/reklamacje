@@ -22,11 +22,19 @@ app.post('/' , (req,res) => {
 
 app.delete('/' , (req,res) =>{
     console.log('usunieto')
+
+    
 })
 
 
 app.get( '/' , (req,res) =>{
     console.log('pobrano')
+
+    const sql = 'SELECT* from wydarzenia'
+
+    db.query(sql,(err,data) => {
+        console.log(res.json(data))
+    })
 })
 
 
