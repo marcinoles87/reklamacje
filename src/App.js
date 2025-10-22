@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios'
 import './App.css';
 import DaneFirmy from './components/DaneFirmy';
@@ -35,6 +35,17 @@ function App() {
     })
   }
 
+  useEffect( () => {
+
+    console.log('pierwszy effect')
+
+    axios.get('http://localhost:8081')
+    .then( res => {
+      console.log(res)
+    })
+    .catch( err => console.log(err)
+    )
+  })
   
 
   const handleSend = () => {
