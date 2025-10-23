@@ -65,7 +65,20 @@ function App() {
 
     setReklamacja()
 
-    console.log()
+    axios.post('http://localhost:8081/' ,
+      {
+        Filia : filia ,
+        Podpisał : sprzedawca ,
+        OsobaZgłaszajaca : daneZglaszajacego ,
+        Email : emailZglaszajacego,
+        OpisReklamacji : opis,
+        DataSprzedazy : zakup,
+        Nazwa : nazwa ,
+        Opis : opis ,
+
+
+      }
+    )
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
