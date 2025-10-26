@@ -4,12 +4,9 @@ import { useState } from 'react'
 function DaneFirmy ({filia,setFilia,paragon,setParagon,sprzedawca,setSprzedawca}) {
     
 
-     const [data , setData ] = useState('')
-
     const dataDzis = new Date()
     const dataZgloszenia = `${dataDzis.getDate()}.${dataDzis.getMonth()+1}.${dataDzis.getFullYear()}`
 
-    console.log(dataDzis.getMonth())
     
   return (
     <div className='dane-firmy'>

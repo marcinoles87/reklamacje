@@ -77,8 +77,10 @@ function App() {
         Opis : opis ,
 
 
-      }
-    )
+      })
+      .then( () =>{
+        alert('succes')
+      })
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
@@ -94,6 +96,11 @@ function App() {
 
 
       `)
+  }
+
+  const handleUpdate = () =>{
+
+    axios.update()
   }
 
   return (
@@ -114,6 +121,7 @@ function App() {
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
 
               <button onClick={handleSend}>Wyślij zgłoszenie</button>
+              <button onClick={handleUpdate}>Zaktualizuj</button>
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
