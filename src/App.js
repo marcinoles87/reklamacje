@@ -57,30 +57,28 @@ function App() {
     .then( res => {
       console.log(res)
             setDane(res.data)
-
-
     })
     .catch( err => console.log(err)
     )
 
     setReklamacja()
 
-    axios.post('http://localhost:8081/' ,
-      {
-        Filia : filia ,
-        Podpisał : sprzedawca ,
-        OsobaZgłaszajaca : daneZglaszajacego ,
-        Email : emailZglaszajacego,
-        OpisReklamacji : opis,
-        DataSprzedazy : zakup,
-        Nazwa : nazwa ,
-        Opis : opis ,
+    // axios.post('http://localhost:8081/' ,
+    //   {
+    //     Filia : filia ,
+    //     Podpisał : sprzedawca ,
+    //     OsobaZgłaszajaca : daneZglaszajacego ,
+    //     Email : emailZglaszajacego,
+    //     OpisReklamacji : opis,
+    //     DataSprzedazy : zakup,
+    //     Nazwa : nazwa ,
+    //     Opis : opis ,
 
 
-      })
-      .then( () =>{
-        alert('succes')
-      })
+    //   })
+    //   .then( () =>{
+    //     alert('succes')
+    //   })
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
