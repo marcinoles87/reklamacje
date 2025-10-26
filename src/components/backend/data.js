@@ -46,10 +46,12 @@ app.delete('/' , (req,res) =>{
     
 })
 
-// app.update('/' , (req,res) =>{
+app.put('/' , (req,res) =>{
 
-//     db.query("ALTER TABLE wydarzenia ADD Email varchar(255)")
-// })
+    db.query("ALTER TABLE wydarzenia ADD Email varchar(255)" , (err,data) =>{
+        console.log(res.json(data))
+    })
+})
 
 
 app.get( '/' , (req,res) =>{

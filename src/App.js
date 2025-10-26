@@ -98,7 +98,11 @@ function App() {
 
   const handleUpdate = () =>{
 
-    axios.update()
+    // axios.put('http://localhost:8081')
+    // .then( res => {
+    //   console.log(res)
+    //         setDane(res.data)
+    // })
   }
 
   return (
@@ -131,6 +135,7 @@ function App() {
                       <p>Data : {item.Data}</p>
                       <p>Opis : {item.Opis}</p>
                       <p>Cena: {item.Cena}</p>
+                      <p>Email : {item.Email}</p>
                     
                     </div>
                   )
