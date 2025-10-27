@@ -63,22 +63,7 @@ function App() {
 
     setReklamacja()
 
-    // axios.post('http://localhost:8081/' ,
-    //   {
-    //     Filia : filia ,
-    //     Podpisał : sprzedawca ,
-    //     OsobaZgłaszajaca : daneZglaszajacego ,
-    //     Email : emailZglaszajacego,
-    //     OpisReklamacji : opis,
-    //     DataSprzedazy : zakup,
-    //     Nazwa : nazwa ,
-    //     Opis : opis ,
-
-
-    //   })
-    //   .then( () =>{
-    //     alert('succes')
-    //   })
+    
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
@@ -96,13 +81,20 @@ function App() {
       `)
   }
 
+  const handleAddTable = () =>{
+    axios.put('http://localhost:8081/' , 
+      {
+        Email:emailZglaszajacego
+      }
+    )
+  }
+
   const handleUpdate = () =>{
 
-    // axios.put('http://localhost:8081')
-    // .then( res => {
-    //   console.log(res)
-    //         setDane(res.data)
-    // })
+    axios.put('http://localhost:8081/')
+    .then( res => {
+      console.log(res)
+    })
   }
 
   return (
@@ -124,6 +116,7 @@ function App() {
 
               <button onClick={handleSend}>Wyślij zgłoszenie</button>
               <button onClick={handleUpdate}>Zaktualizuj</button>
+              <button onClick={handleAddTable}>Dodaj nowe dane</button>
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
