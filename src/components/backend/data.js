@@ -18,8 +18,10 @@ const db = mysql.createConnection({
 
 app.post('/' , (req,res) => {
 
+    const dataDzis = new Date()
+
     const Nazwa = req.body.Nazwa;
-    const Data = req.body.Data;
+    const Data = req.body.dataDzis;
     const Opis = req.body.Opis;
     const Adres = req.body.Adres;
     const Nip = req.body.Nip;
@@ -58,12 +60,13 @@ app.put('/' , (req,res) =>{
 
 
 app.get( '/' , (req,res) =>{
+
     console.log('pobrano')
 
-    const sql = 'SELECT* from wydarzenia'
+    const sql = 'SELECT* from wydarzenia';
 
     db.query(sql,(err,data) => {
-        // console.log(res.json(data))
+        console.log(res.json(data))
     })
 })
 

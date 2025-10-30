@@ -44,6 +44,7 @@ function App() {
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res.data)
+      
     
     })
     .catch( err => console.log(err)
@@ -56,6 +57,7 @@ function App() {
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
+      console.log(res.data)
             setDane(res.data)
     })
     .catch( err => console.log(err)
@@ -63,22 +65,7 @@ function App() {
 
     setReklamacja()
 
-    // axios.post('http://localhost:8081/' ,
-    //   {
-    //     Filia : filia ,
-    //     Podpisał : sprzedawca ,
-    //     OsobaZgłaszajaca : daneZglaszajacego ,
-    //     Email : emailZglaszajacego,
-    //     OpisReklamacji : opis,
-    //     DataSprzedazy : zakup,
-    //     Nazwa : nazwa ,
-    //     Opis : opis ,
 
-
-    //   })
-    //   .then( () =>{
-    //     alert('succes')
-    //   })
     alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
@@ -98,7 +85,7 @@ function App() {
 
   const handleUpdate = () =>{
 
-    axios.post('http://localhost:8081/' , 
+    axios.post('http://localhost:8081' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
@@ -155,20 +142,7 @@ function App() {
                 })}
               </div>
 
-    
 
-     
-
-
-{/* 
-      <div className='sprawdzdenie'>
-        <p>Filia :{filia}</p>
-        <p>Paragon : {paragon}</p>
-        <p>Sporządził : {sprzedawca}</p>
-        <p>Kod : {kod}</p>
-        <p>Nazwa : {nazwa}</p>
-        <p>Opis wady : {opis}</p>
-      </div> */}
       
       
     </div>
