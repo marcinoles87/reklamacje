@@ -98,7 +98,7 @@ function App() {
 
   const handleUpdate = () =>{
 
-    axios.post('http://localhost:8081' , 
+    axios.post('http://localhost:8081/' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
@@ -108,12 +108,11 @@ function App() {
         DataSprzedazy : zakup,
         Nazwa : nazwa ,
         Opis : opis ,
-
-      }
+        })
       .then( () =>{
-        alert('succes')
+        alert('succes');
       })
-    )
+    
     
     
   }
@@ -148,7 +147,8 @@ function App() {
                       <p>Data : {item.Data}</p>
                       <p>Opis : {item.Opis}</p>
                       <p>Cena: {item.Cena}</p>
-                      <p>Email : {item.Email}</p>
+                      <p>Filia : {item.Filia}</p>
+                      <p>Opis reklamacji : {item.OpisReklamacji}</p>
                     
                     </div>
                   )

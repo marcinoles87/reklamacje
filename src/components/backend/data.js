@@ -29,14 +29,14 @@ app.post('/' , (req,res) => {
     const OpisReklamacji = req.body.OpisReklamacji;
 
 
-    db.query("INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip , Cena , Filia , Podpisał , OpisReklamacji) VALUES (?, ? , ? , ? , ? , ? , ? , ? , ?)" , [Nazwa,Data,Opis,Adres,Nip,Cena,Filia,Podpisał,OpisReklamacji] , 
+    db.query("INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip , Cena , Filia , OpisReklamacji) VALUES (?, ? , ? , ? , ? , ? , ? , ?)" , [Nazwa,Data,Opis,Adres,Nip,Cena,Filia,OpisReklamacji] , 
         (err , result) => {
-            console.log(result)
+            console.log(result);
             if(err) {
-                console.log('error dodawania')
+                console.log('error dodawania');
             }else{
-                res.send('values insered')
-            }
+                res.send('values insered');
+            };
 
         }
     )
@@ -63,7 +63,7 @@ app.get( '/' , (req,res) =>{
     const sql = 'SELECT* from wydarzenia'
 
     db.query(sql,(err,data) => {
-        console.log(res.json(data))
+        // console.log(res.json(data))
     })
 })
 
