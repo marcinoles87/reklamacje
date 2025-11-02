@@ -104,8 +104,12 @@ function App() {
     
   }
 
-  const handleDelete = () =>{
-    
+  const handleDelete = (item) =>{
+
+    // axios.delete('http://localhost:8081', )
+
+    console.log(item)
+    console.log('jestem w srodku delete')
   }
 
   return (
@@ -141,7 +145,7 @@ function App() {
                       <p>Filia : {item.Filia}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
-                      <button onClick={handleDelete}>Delete document</button>
+                      <button onClick={handleDelete(item)}>Delete document</button>
                     
                     </div>
                   )
