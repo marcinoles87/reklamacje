@@ -145,7 +145,7 @@ function App() {
                       <p>Filia : {item.Filia}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
-                      <button onClick={handleDelete(item)}>Delete document</button>
+                      <button onClick={ () => handleDelete(item)}>Delete document</button>
                     
                     </div>
                   )
