@@ -63,7 +63,7 @@ app.get( '/' , (req,res) =>{
 
     console.log('pobrano')
 
-    const sql = 'SELECT* from wydarzenia';
+    const sql = 'SELECT* from wydarzenia'
 
     db.query(sql,(err,data) => {
         console.log(res.json(data))

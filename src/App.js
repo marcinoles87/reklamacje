@@ -104,6 +104,10 @@ function App() {
     
   }
 
+  const handleDelete = () =>{
+    
+  }
+
   return (
     <div className="App">
 
@@ -136,6 +140,8 @@ function App() {
                       <p>Cena: {item.Cena}</p>
                       <p>Filia : {item.Filia}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
+
+                      <button onClick={handleDelete}>Delete document</button>
                     
                     </div>
                   )
