@@ -46,19 +46,17 @@ app.post('/' , (req,res) => {
 
 })
 
-app.delete('/:Nazwa' , (req,res) =>{
+app.delete('/delete/:item' , (req,res) =>{
     console.log('usunieto')
 
-    console.log(req.body.Nazwa)
-
-    const Nazwa = req.params.Nazwa
+    const Nazwa = req.params.item
 
     db.query("DELETE from wydarzenie WHERE Nazwa = ? " , Nazwa ,
-        (err,results) => {
+        (err,result) => {
             if(err){
                 console.log(err)
             }else{
-                 console.log(results)
+                 res.send(result)
             }
         }
     )
