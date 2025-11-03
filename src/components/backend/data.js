@@ -46,14 +46,11 @@ app.post('/' , (req,res) => {
 
 })
 
-app.delete('/:item' , (req,res) =>{
-    console.log('usunieto');
+app.delete('/delete/:item' , (req,res) =>{
 
-    console.log(req.body.Nazwa);
+    const item = req.params.item;
 
-    const item = req.params.Nazwa;
-
-    db.query("DELETE from wydarzenie WHERE Nazwa = ? " , item ,
+    db.query("DELETE from wydarzenia WHERE Nazwa = ? " , item ,
         (err,results) => {
             if(err){
                 console.log(err);
