@@ -106,14 +106,8 @@ function App() {
 
   const handleDelete = async (item) =>{
 
-    axios.delete(`http://localhost:8081/delete/${item}`)
-    //   {
-    //     data : 
-    //     {
-    //        Nazwa : item.Nazwa ,
-    //     }
-    //   }
-    // )
+    axios.delete(`http://localhost:8081/${item}`)
+    
 
     console.log(item)
     console.log('jestem w srodku delete')

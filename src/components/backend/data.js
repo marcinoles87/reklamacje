@@ -34,6 +34,7 @@ app.post('/' , (req,res) => {
 
     db.query("INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip , Cena , Filia , OpisReklamacji) VALUES (?, ? , ? , ? , ? , ? , ? , ?)" , [Nazwa,Data,Opis,Adres,Nip,Cena,Filia,OpisReklamacji] , 
         (err , result) => {
+            console.log(result);
             if(err) {
                 console.log('error dodawania');
             }else{
@@ -45,17 +46,19 @@ app.post('/' , (req,res) => {
 
 })
 
-app.delete('/delete/:item' , (req,res) =>{
-    console.log('usunieto')
+app.delete('/:item' , (req,res) =>{
+    console.log('usunieto');
 
-    const Nazwa = req.params.item
+    console.log(req.body.Nazwa);
 
-    db.query("DELETE from wydarzenie WHERE Nazwa = ? " , Nazwa ,
-        (err,result) => {
+    const item = req.params.Nazwa;
+
+    db.query("DELETE from wydarzenie WHERE Nazwa = ? " , item ,
+        (err,results) => {
             if(err){
-                console.log(err)
+                console.log(err);
             }else{
-                 res.send(result)
+                 console.log(results);
             }
         }
     )
@@ -66,6 +69,7 @@ app.delete('/delete/:item' , (req,res) =>{
 app.put('/' , (req,res) =>{
 
     db.query("ALTER TABLE wydarzenia ADD Filia varchar(255)" , (err,data) =>{
+        console.log(res.json(data))
     })
 })
 
@@ -77,6 +81,7 @@ app.get( '/' , (req,res) =>{
     const sql = 'SELECT* from wydarzenia'
 
     db.query(sql,(err,data) => {
+        console.log(res.json(data))
     })
 })
 
