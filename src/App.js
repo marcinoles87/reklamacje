@@ -106,20 +106,14 @@ function App() {
 
   const handleDelete = async (item) =>{
 
-    axios.delete(`http://localhost:8081/${item}`,
-      {
-        data : 
-        {
-
-      Nazwa : item.Nazwa ,
-      Data : item.Data ,
-      Opis : item.Opis ,
-      Adres : item.Adres ,
-      Nip : item.Nip ,
-      Cena : item.Cena ,
-        }
-      }
-    )
+    // axios.delete(`http://localhost:8081/${item}`,
+    //   {
+    //     data : 
+    //     {
+    //        Nazwa : item.Nazwa ,
+    //     }
+    //   }
+    // )
 
     console.log(item)
     console.log('jestem w srodku delete')
@@ -158,7 +152,7 @@ function App() {
                       <p>Filia : {item.Filia}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
-                      <button onClick={ () => handleDelete(item)}>Delete document</button>
+                      <button onClick={ () => handleDelete(item.Nazwa)}>Delete document</button>
                     
                     </div>
                   )

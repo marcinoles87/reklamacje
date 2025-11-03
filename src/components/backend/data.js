@@ -1,6 +1,7 @@
 const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
+const e = require('cors');
 
 const app = express();
 
@@ -45,8 +46,22 @@ app.post('/' , (req,res) => {
 
 })
 
-app.delete('/' , (req,res) =>{
+app.delete('/:Nazwa' , (req,res) =>{
     console.log('usunieto')
+
+    console.log(req.body.Nazwa)
+
+    const Nazwa = req.params.Nazwa
+
+    db.query("DELETE from wydarzenie WHERE Nazwa = ? " , Nazwa ,
+        (err,results) => {
+            if(err){
+                console.log(err)
+            }else{
+                 console.log(results)
+            }
+        }
+    )
 
     
 })
