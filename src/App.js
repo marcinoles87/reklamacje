@@ -108,6 +108,9 @@ function App() {
 
     axios.delete(`http://localhost:8081/delete/${item}`)
     
+    setDane(wszystkieDaneBazy.filter( (val) =>{
+      return item === val.Nazwa
+    }))
 
     console.log(item)
     console.log('jestem w srodku delete')
