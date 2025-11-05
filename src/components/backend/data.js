@@ -21,18 +21,18 @@ app.post('/' , (req,res) => {
 
     const dataDzis = new Date()
 
-    const Nazwa = req.body.Nazwa;
-    const Data = req.body.dataDzis;
-    const Opis = req.body.Opis;
-    const Adres = req.body.Adres;
-    const Nip = req.body.Nip;
-    const Cena = req.body.Cena;
     const Filia = req.body.Filia;
     const Podpisał = req.body.Podpisał;
+    const OsobaZgłaszajaca = req.body.OsobaZgłaszajaca;
+    const Email = req.body.Email;
     const OpisReklamacji = req.body.OpisReklamacji;
+    const DataSprzedazy = req.body.DataSprzedazy;
+    const Nazwa = req.body.Nazwa;
+    const Opis = req.body.Opis;
+    
 
 
-    db.query("INSERT INTO wydarzenia (Nazwa , Data , Opis , Adres , Nip , Cena , Filia , OpisReklamacji) VALUES (?, ? , ? , ? , ? , ? , ? , ?)" , [Nazwa,Data,Opis,Adres,Nip,Cena,Filia,OpisReklamacji] , 
+    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,DataSprzedazy,Nazwa,Opis) VALUES (?, ? , ? , ? , ? , ? , ? , ?)" , [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,DataSprzedazy,Nazwa,Opis] , 
         (err , result) => {
             console.log(result);
             if(err) {
