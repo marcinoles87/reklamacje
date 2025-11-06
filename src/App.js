@@ -90,7 +90,7 @@ function App() {
     console.log('jestem w srodku')
     console.log(filia,sprzedawca)
 
-    axios.post('http://localhost:8081/reklamacje' , 
+    axios.post('http://localhost:8081/reklamacje/' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,

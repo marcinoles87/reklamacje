@@ -17,7 +17,7 @@ const db = mysql.createConnection({
 })
 
 
-app.post('/reklamacje' , (req,res) => {
+app.post('/reklamacje/' , (req,res) => {
 
     const dataDzis = new Date()
 
