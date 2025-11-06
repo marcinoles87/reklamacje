@@ -90,7 +90,7 @@ function App() {
     console.log('jestem w srodku')
     console.log(filia,sprzedawca)
 
-    axios.post('http://localhost:8081/reklamacje/' , 
+    axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
@@ -109,6 +109,8 @@ function App() {
   }
 
   const handleDelete = async (item) =>{
+
+    console.log(item)
 
     axios.delete(`http://localhost:8081/delete/${item}`)
     
@@ -151,9 +153,12 @@ function App() {
                       <p>Opis : {item.Opis}</p>
                       <p>Cena: {item.Cena}</p>
                       <p>Filia : {item.Filia}</p>
+                      <p>Podpisał : {item.Podpisał}</p>
+                      <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca}</p>
+                      <p>Email klienta : {item.Email}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
-                      <button onClick={ () => handleDelete(item.Nazwa)}>Delete document</button>
+                      <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
                     
                     </div>
                   )
