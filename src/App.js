@@ -85,7 +85,7 @@ function App() {
       `)
   }
 
-  const handleUpdate = (filia,sprzedawca) =>{
+  const handleUpdate = () =>{
 
     console.log('jestem w srodku')
     console.log(filia,sprzedawca)
@@ -96,10 +96,10 @@ function App() {
         Podpisał : sprzedawca ,
         OsobaZgłaszajaca : daneZglaszajacego ,
         Email : emailZglaszajacego,
-        OpisReklamacji : opis,
-        DataSprzedazy : zakup,
-        Nazwa : nazwa ,
-        Opis : opis ,
+        // OpisReklamacji : opis,
+        // DataSprzedazy : zakup,
+        // Nazwa : nazwa ,
+        // Opis : opis ,
         })
       .then( () =>{
         alert('succes');
