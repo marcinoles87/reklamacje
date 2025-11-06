@@ -110,6 +110,7 @@ function App() {
 
   const handleDelete = async (item) =>{
 
+
     console.log(item)
 
     axios.delete(`http://localhost:8081/delete/${item}`)

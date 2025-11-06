@@ -51,7 +51,7 @@ app.delete('/delete/:item' , (req,res) =>{
 
     const item = req.params.item;
 
-    db.query("DELETE from wydarzenia WHERE Nazwa = ? " , item ,
+    db.query("DELETE from wydarzenia WHERE Email = ? " , item ,
         (err,results) => {
             if(err){
                 console.log(err);
