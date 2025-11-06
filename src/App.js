@@ -54,6 +54,8 @@ function App() {
 
   const handleSend = () => {
 
+
+
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
@@ -83,9 +85,12 @@ function App() {
       `)
   }
 
-  const handleUpdate = () =>{
+  const handleUpdate = (filia,sprzedawca) =>{
 
-    axios.post('http://localhost:8081' , 
+    console.log('jestem w srodku')
+    console.log(filia,sprzedawca)
+
+    axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
