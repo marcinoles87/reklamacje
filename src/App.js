@@ -100,8 +100,7 @@ function App() {
         // DataSprzedazy : zakup,
         // Nazwa : nazwa ,
         // Opis : opis ,
-        })
-      .then( () =>{
+        }).then( () =>{
         alert('succes');
       })
     

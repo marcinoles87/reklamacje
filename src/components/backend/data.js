@@ -17,7 +17,7 @@ const db = mysql.createConnection({
 })
 
 
-app.post('/reklamacje/' , (req,res) => {
+app.post('/reklamacje' , (req,res) => {
 
     const dataDzis = new Date()
 
@@ -32,7 +32,8 @@ app.post('/reklamacje/' , (req,res) => {
     
 
 
-    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email) VALUES (?, ? , ? , ?)" , [Filia,Podpisał,OsobaZgłaszajaca,Email] , 
+    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email) VALUES (?, ? , ? , ?)" , 
+        [Filia,Podpisał,OsobaZgłaszajaca,Email] , 
         (err , result) => {
             console.log(result);
             if(err) {
