@@ -52,7 +52,7 @@ function App() {
   })
   
 
-  const handleSend = () => {
+  const handleShow = () => {
 
 
 
@@ -96,10 +96,11 @@ function App() {
         Podpisał : sprzedawca ,
         OsobaZgłaszajaca : daneZglaszajacego ,
         Email : emailZglaszajacego,
-        // OpisReklamacji : opis,
+        OpisReklamacji : opis,
+        Nazwa : nazwa ,
         // DataSprzedazy : zakup,
-        // Nazwa : nazwa ,
-        // Opis : opis ,
+        
+      
         }).then( () =>{
         alert('succes');
       })
@@ -140,8 +141,8 @@ function App() {
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
 
-              <button onClick={handleSend}>Wyślij zgłoszenie</button>
-              <button onClick={handleUpdate}>Zaktualizuj</button>
+              <button onClick={handleShow}>Pokaż zgłoszenia</button>
+              <button onClick={handleUpdate}>Dodaj zgłoszenie</button>
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
@@ -155,6 +156,7 @@ function App() {
                       <p>Cena: {item.Cena}</p>
                       <p>Filia : {item.Filia}</p>
                       <p>Podpisał : {item.Podpisał}</p>
+                      <p>Paragon nr : {item.Paragon}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca}</p>
                       <p>Email klienta : {item.Email}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
