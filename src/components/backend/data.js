@@ -26,9 +26,7 @@ app.post('/reklamacje' , (req,res) => {
     const OsobaZgłaszajaca = req.body.OsobaZgłaszajaca;
     const Email = req.body.Email;
     const OpisReklamacji = req.body.OpisReklamacji;
-    const DataSprzedazy = req.body.DataSprzedazy;
     const Nazwa = req.body.Nazwa;
-    const Opis = req.body.Opis;
     
 
 
