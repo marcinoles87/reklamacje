@@ -153,9 +153,11 @@ function App() {
                   return(
                     <div className='dane-container' key={index}>
                       
-                      <p>Nazwa : {item.Nazwa}</p>
-                      <p>Data : {item.Data}</p>
+                      <p>Nazwa : {item.Nazwa} , kod : {item.Kod}</p>
+                      <p>Data zakupu : {item.Zakup}</p>
+                      <p>Data sporządzenia reklamacji: {item.Data}</p>
                       <p>Opis : {item.Opis}</p>
+                      <p>Sposób załatwienia reklamacji : {item.Żadanie}</p>
                       <p>Cena: {item.Cena}</p>
                       <p>Filia : {item.Filia}</p>
                       <p>Podpisał : {item.Podpisał}</p>

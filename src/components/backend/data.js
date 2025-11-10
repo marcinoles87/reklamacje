@@ -34,7 +34,7 @@ app.post('/reklamacje' , (req,res) => {
 
 
     db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup) VALUES (?,?,?,?,?,?,?,?,?)" , 
-        [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa] , 
+        [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup] , 
         (err , result) => {
             console.log(result);
             if(err) {
