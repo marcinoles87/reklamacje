@@ -87,7 +87,7 @@ function App() {
   const handleUpdate = () =>{
 
     console.log('jestem w srodku')
-    console.log(filia,sprzedawca)
+    console.log(filia,sprzedawca,zadanie,kod,zakup)
 
     axios.post('http://localhost:8081/reklamacje' , 
         {
@@ -101,9 +101,6 @@ function App() {
         Kod : kod ,
         Zakup : zakup ,
 
-        // DataSprzedazy : zakup,
-        
-      
         }).then( () =>{
         alert('succes');
       })
