@@ -27,10 +27,13 @@ app.post('/reklamacje' , (req,res) => {
     const Email = req.body.Email;
     const OpisReklamacji = req.body.OpisReklamacji;
     const Nazwa = req.body.Nazwa;
+    const Żadanie = req.body.Żadanie;
+    const Kod = req.body.Kod;
+    const Zakup = req.body.Zakup;
     
 
 
-    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa) VALUES (?,?,?,?,?,?)" , 
+    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup) VALUES (?,?,?,?,?,?,?,?,?)" , 
         [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa] , 
         (err , result) => {
             console.log(result);

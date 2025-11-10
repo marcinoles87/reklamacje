@@ -14,7 +14,6 @@ function App() {
   const [emailZglaszajacego , setEmailZglaszajacego] = useState('')
   const [towar , setTowar] = useState('')
   const [zgloszenie , setZgloszenie] = useState('')
-  const [żadanie , setŻadanie] = useState('')
   const [filia , setFilia] = useState('')
   const [paragon , setParagon ] = useState('')
   const [sprzedawca , setSprzedawca] = useState('')
@@ -98,6 +97,10 @@ function App() {
         Email : emailZglaszajacego,
         OpisReklamacji : opis,
         Nazwa : nazwa ,
+        Żadanie : zadanie ,
+        Kod : kod ,
+        Zakup : zakup ,
+
         // DataSprzedazy : zakup,
         
       
