@@ -19,7 +19,6 @@ const db = mysql.createConnection({
 
 app.post('/reklamacje' , (req,res) => {
 
-    const dataDzis = new Date()
 
     const Filia = req.body.Filia;
     const Podpisał = req.body.Podpisał;
@@ -30,6 +29,7 @@ app.post('/reklamacje' , (req,res) => {
     const Żadanie = req.body.Żadanie;
     const Kod = req.body.Kod;
     const Zakup = req.body.Zakup;
+    const DataSporzadzenia = req.body.DataSporzadzenia
     
 
 

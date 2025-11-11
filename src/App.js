@@ -27,6 +27,8 @@ function App() {
   const [numerReklamacji , setNumer] = useState(0)
 
   const [wszystkieDaneBazy , setDane] = useState([])
+
+  
  
 
   const setReklamacja = () => {
@@ -52,6 +54,11 @@ function App() {
   
 
   const handleShow = () => {
+
+     const dataDzis = new Date(); 
+  const dataSporzadzenia = dataDzis
+
+  console.log(dataSporzadzenia)
 
 
 
@@ -86,6 +93,11 @@ function App() {
 
   const handleUpdate = () =>{
 
+    const dataDzis = new Date(); 
+    const dataSporzadzenia = dataDzis.getDate();
+
+    console.log(dataSporzadzenia)
+
     console.log('jestem w srodku')
     console.log(filia,sprzedawca,zadanie,kod,zakup)
 
@@ -100,6 +112,8 @@ function App() {
         Żadanie : zadanie ,
         Kod : kod ,
         Zakup : zakup ,
+        DataSporzadzenia : dataSporzadzenia ,
+        
 
         }).then( () =>{
         alert('succes');
