@@ -9,11 +9,8 @@ import logo from './components/img/logoMp.jpg'
 
 function App() {
 
-  const [daneFirmy , setDaneFirmy] = useState('')
   const [daneZglaszajacego , setDaneZglaszajacego] = useState('')
   const [emailZglaszajacego , setEmailZglaszajacego] = useState('')
-  const [towar , setTowar] = useState('')
-  const [zgloszenie , setZgloszenie] = useState('')
   const [filia , setFilia] = useState('')
   const [paragon , setParagon ] = useState('')
   const [sprzedawca , setSprzedawca] = useState('')
@@ -55,14 +52,8 @@ function App() {
 
   const handleShow = () => {
 
-     const dataDzis = new Date(); 
-  const dataSporzadzenia = dataDzis
 
-  console.log(dataSporzadzenia)
-
-
-
-    axios.get('http://localhost:8081')
+  axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
       console.log(res.data)
@@ -93,15 +84,19 @@ function App() {
 
   const handleUpdate = () =>{
 
-    const dataDzis = new Date(); 
-    const dataSporzadzenia = dataDzis.getDate();
+  const dataDzis = new Date(); 
+  const dzien = dataDzis.getDate();
+  const miesiac = dataDzis.getDate();
+  const rok = dataDzis.getFullYear();
 
-    console.log(dataSporzadzenia)
+  const dataSporzadzenia = `${dzien}-${miesiac}-${rok}`
 
-    console.log('jestem w srodku')
-    console.log(filia,sprzedawca,zadanie,kod,zakup)
+  console.log(dataSporzadzenia)
 
-    axios.post('http://localhost:8081/reklamacje' , 
+  console.log('jestem w srodku')
+  console.log(filia,sprzedawca,zadanie,kod,zakup)
+
+  axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
