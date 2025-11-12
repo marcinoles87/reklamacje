@@ -170,7 +170,6 @@ function App() {
                       <p>Sposób załatwienia reklamacji : {item.Żadanie}</p>
                       <p>Filia : {item.Filia}</p>
                       <p>Podpisał : {item.Podpisał}</p>
-                      <p>Paragon nr : {item.Paragon}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
                       <p>Email klienta : {item.Email}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
