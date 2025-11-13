@@ -26,7 +26,9 @@ function App() {
   const [wszystkieDaneBazy , setDane] = useState([])
 
   
- 
+ const handleFilter = () =>{
+  console.log('filtrowanie')
+ }
 
   const setReklamacja = () => {
    
@@ -159,6 +161,12 @@ function App() {
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
+                <p>Filtry</p>
+                <div className='filter-container'>
+                  <label>Filia
+                    <input onChange={handleFilter}></input>
+                  </label>
+                </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
                     <div className='dane-container' key={index}>
