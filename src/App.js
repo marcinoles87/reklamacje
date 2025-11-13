@@ -25,6 +25,8 @@ function App() {
 
   const [wszystkieDaneBazy , setDane] = useState([])
 
+  const [filter , setFiler] = useState('');
+
   
  const handleFilter = (item) =>{
   console.log(item)
@@ -163,18 +165,18 @@ function App() {
                 <h1>Wszystkie reklamacje</h1>
                 <div className='filter-container'>
                   <label>Filia
-                    <input onChange={ (e) => handleFilter(e.target.value)}></input>
+                    <input onChange={ (e) => setFiler(e.target.value)}></input>
                   </label>
 
                   <label>Data sprzedaży
-                    <input onChange={ (e) => handleFilter(e.target.value)}></input>
+                    <input onChange={ (e) => setFiler(e.target.value)}></input>
                   </label>
 
                   <label>Sporządził
-                    <input onChange={ (e) => handleFilter(e.target.value)}></input>
+                    <input onChange={ (e) => setFiler(e.target.value)}></input>
                   </label>
 
-                  <button>Znajdz</button>
+                  <button onClick={handleFilter(filter)}>Znajdz</button>
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
