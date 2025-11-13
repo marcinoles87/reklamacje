@@ -161,9 +161,16 @@ function App() {
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
-                <p>Filtry</p>
                 <div className='filter-container'>
                   <label>Filia
+                    <input onChange={handleFilter}></input>
+                  </label>
+
+                  <label>Data sprzedaży
+                    <input onChange={handleFilter}></input>
+                  </label>
+
+                  <label>Sporządził
                     <input onChange={handleFilter}></input>
                   </label>
                 </div>

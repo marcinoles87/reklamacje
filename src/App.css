@@ -103,3 +103,12 @@ input:hover{
   padding: 10px;
 }
 
+.filter-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.filter-container input{
+  
+}
+
