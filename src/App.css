@@ -6,6 +6,7 @@
 
 :root{
   --main-color : #009e57;
+  --inputs-border : rgb(80, 80, 80);
 }
 
 .App{
@@ -106,9 +107,11 @@ input:hover{
 .filter-container{
   display: flex;
   flex-direction: row;
+  margin: 10px;
 }
 
 .filter-container input{
-  
+  border: 2px solid ;
+  border-color: var(--inputs-border);
 }
 
