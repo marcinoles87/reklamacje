@@ -108,6 +108,7 @@ input:hover{
   display: flex;
   flex-direction: row;
   margin: 10px;
+  align-items: center;
 }
 
 .filter-container input{
