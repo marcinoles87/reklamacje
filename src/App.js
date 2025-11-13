@@ -174,7 +174,7 @@ function App() {
                     <input onChange={ (e) => handleFilter(e.target.value)}></input>
                   </label>
 
-                  <button>Szukaj</button>
+                  <button>Znajdz</button>
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
