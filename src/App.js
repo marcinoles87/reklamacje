@@ -25,7 +25,7 @@ function App() {
 
   const [wszystkieDaneBazy , setDane] = useState([])
 
-  const [filter , setFiler] = useState('');
+  const [filter , setFilter] = useState('');
 
   
  const handleFilter = (item) =>{
@@ -165,15 +165,15 @@ function App() {
                 <h1>Wszystkie reklamacje</h1>
                 <div className='filter-container'>
                   <label>Filia
-                    <input onChange={ (e) => setFiler(e.target.value)}></input>
+                    <input onChange={ (e) => setFilter(e.target.value)}></input>
                   </label>
 
                   <label>Data sprzedaży
-                    <input onChange={ (e) => setFiler(e.target.value)}></input>
+                    <input onChange={ (e) => setFilter(e.target.value)}></input>
                   </label>
 
                   <label>Sporządził
-                    <input onChange={ (e) => setFiler(e.target.value)}></input>
+                    <input onChange={ (e) => setFilter(e.target.value)}></input>
                   </label>
 
                   <button onClick={handleFilter(filter)}>Znajdz</button>
@@ -187,7 +187,7 @@ function App() {
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                       <p>Sposób załatwienia reklamacji : {item.Żadanie}</p>
-                      <p>Filia : <span style={{color:'green',fontWeight:'bold'}}>{item.Filia}</span></p>
+                      <p>Filia : <span style={{color:'green',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                       <p>Podpisał : {item.Podpisał}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
                       <p>Email klienta : {item.Email}</p>
