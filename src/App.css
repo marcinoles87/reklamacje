@@ -23,11 +23,6 @@
   padding: 10px;
 }
 
-.dane-nazwa{
-  font-size: 20px;
-  color:blueviolet;
-}
-
 .sprawdzenie{
   display: flex;
   flex-direction: column;

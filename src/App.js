@@ -182,12 +182,12 @@ function App() {
                   return(
                     <div className='dane-container' key={index}>
                       
-                      <p className='dane-nazwa'>Nazwa : {item.Nazwa} , kod : {item.Kod}</p>
+                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod}</span></p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
-                      <p>Data zakupu : {item.Zakup} / Paragon {item.Paragon}</p>
+                      <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                       <p>Sposób załatwienia reklamacji : {item.Żadanie}</p>
-                      <p>Filia : {item.Filia}</p>
+                      <p>Filia : <span style={{color:'green',fontWeight:'bold'}}>{item.Filia}</span></p>
                       <p>Podpisał : {item.Podpisał}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
                       <p>Email klienta : {item.Email}</p>
