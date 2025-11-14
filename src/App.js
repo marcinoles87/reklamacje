@@ -182,7 +182,7 @@ function App() {
                   return(
                     <div className='dane-container' key={index}>
                       
-                      <p>Nazwa : {item.Nazwa} , kod : {item.Kod}</p>
+                      <p className='dane-nazwa'>Nazwa : {item.Nazwa} , kod : {item.Kod}</p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
                       <p>Data zakupu : {item.Zakup} / Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
