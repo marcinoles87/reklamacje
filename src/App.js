@@ -28,9 +28,14 @@ function App() {
   const [filter , setFilter] = useState('');
 
   
- const handleFilter = (item) =>{
-  console.log(item)
- }
+ const handleFilter = () =>{
+  
+  console.log(wszystkieDaneBazy)
+  const wyselekcjonowaneDane = [...wszystkieDaneBazy];
+  const nowa = wyselekcjonowaneDane.filter( item => item.Filia.includes(filter))
+  setDane(nowa)
+
+}
 
   const setReklamacja = () => {
    
@@ -176,7 +181,7 @@ function App() {
                     <input onChange={ (e) => setFilter(e.target.value)}></input>
                   </label>
 
-                  <button onClick={handleFilter(filter)}>Znajdz</button>
+                  <button onClick={handleFilter}>Znajdz</button>
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
