@@ -117,10 +117,10 @@ function App() {
         Kod : kod ,
         Zakup : zakup ,
         DataSporzadzenia : dataSporzadzenia ,
-
         Paragon : paragon ,
         Telefon : tel ,
         Wyglad : wyglad ,
+        NumerReklamacji : numerReklamacji,
         
 
         }).then( () =>{
