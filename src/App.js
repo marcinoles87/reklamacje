@@ -83,6 +83,10 @@ function App() {
       `)
   }
 
+  const handleRozpatrzona = () =>{
+
+  }
+
   const handleUpdate = () =>{
 
   const dataDzis = new Date(); 
@@ -174,7 +178,7 @@ function App() {
 
                     <div className='dane-container' key={index}>
                       
-                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {item.index}</span></p>
+                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {index}</span></p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
@@ -186,6 +190,7 @@ function App() {
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
+                      <button onClick={handleRozpatrzona}>Rozpatrzona</button>
                     
                     </div>
                   )
