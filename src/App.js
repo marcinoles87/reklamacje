@@ -25,6 +25,7 @@ function App() {
 
   const [filter , setFilter] = useState('');
 
+  console.log(sprzedawca)
   
  const handleFilter = () =>{
   
@@ -170,7 +171,7 @@ function App() {
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
-                    
+
                     <div className='dane-container' key={index}>
                       
                       <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {item.index}</span></p>
