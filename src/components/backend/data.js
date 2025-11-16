@@ -82,6 +82,7 @@ app.get( '/' , (req,res) =>{
     console.log('pobrano')
 
     const sql = 'SELECT* from wydarzenia'
+    const sql2 = 'SELECT* from numerReklamacji'
 
     db.query(sql,(err,data) => {
         console.log(res.json(data))

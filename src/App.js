@@ -21,7 +21,7 @@ function App() {
   const [wyglad , setWyglad] = useState('')
   const [zakup , setZakup] = useState('')
   const [zadanie, setZadanie] = useState('')
-  const [numerReklamacji , setNumer] = useState(0)
+  const [numerReklamacji , setNumerReklamacji] = useState(0)
 
   const [wszystkieDaneBazy , setDane] = useState([])
 
@@ -39,7 +39,7 @@ function App() {
 
   const setReklamacja = () => {
    
-    setNumer( (prev) => {
+    setNumerReklamacji( (prev) => {
       return prev+1
     })
   }
