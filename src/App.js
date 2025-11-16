@@ -191,7 +191,7 @@ function App() {
                       <p>Opis przedmiotu : {item.Wyglad}</p>
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
-                      <p>Sposób załatwienia reklamacji : {item.Żadanie}</p>
+                      <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
                       <p>Filia : <span style={{color:'green',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                       <p>Podpisał : {item.Podpisał}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
