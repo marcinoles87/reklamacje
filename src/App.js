@@ -21,8 +21,6 @@ function App() {
   const [wyglad , setWyglad] = useState('')
   const [zakup , setZakup] = useState('')
   const [zadanie, setZadanie] = useState('')
-  const [numerReklamacji , setNumerReklamacji] = useState(0)
-
   const [wszystkieDaneBazy , setDane] = useState([])
 
   const [filter , setFilter] = useState('');
@@ -37,12 +35,6 @@ function App() {
 
 }
 
-  const setReklamacja = () => {
-   
-    setNumerReklamacji( (prev) => {
-      return prev+1
-    })
-  }
 
   useEffect( () => {
 
@@ -71,7 +63,6 @@ function App() {
     .catch( err => console.log(err)
     )
 
-    setReklamacja()
 
 
     alert(`
@@ -97,13 +88,9 @@ function App() {
   const dzien = dataDzis.getDate();
   const miesiac = dataDzis.getDate();
   const rok = dataDzis.getFullYear();
-
   const dataSporzadzenia = `${dzien}-${miesiac}-${rok}`
 
-  console.log(dataSporzadzenia)
-
   console.log('jestem w srodku')
-  console.log(filia,sprzedawca,zadanie,kod,zakup)
 
   axios.post('http://localhost:8081/reklamacje' , 
         {
@@ -120,7 +107,6 @@ function App() {
         Paragon : paragon ,
         Telefon : tel ,
         Wyglad : wyglad ,
-        NumerReklamacji : numerReklamacji,
         
 
         }).then( () =>{
@@ -154,7 +140,6 @@ function App() {
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być względnie wyczyszczony , bez resztek jedzenia / napojów .</p>
-      <p>Reklamacja nr : {numerReklamacji} </p>
       </div>
 
 
@@ -187,7 +172,7 @@ function App() {
                   return(
                     <div className='dane-container' key={index}>
                       
-                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod}</span></p>
+                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {item.index}</span></p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
