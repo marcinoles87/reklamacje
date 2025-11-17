@@ -25,7 +25,6 @@ function App() {
 
   const [filter , setFilter] = useState('');
 
-  console.log(sprzedawca)
   
  const handleFilter = () =>{
   
@@ -83,11 +82,11 @@ function App() {
       `)
   }
 
-  const handleRozpatrzona = () =>{
+  const handleRozpatrzona = (item) =>{
 
+    const reklamacja = document.getElementsByName[item]
+        console.log(reklamacja)
 
-    const reklamacja = document.querySelector('.dane-container')
-    reklamacja.classList.toggle('rozpatrzona')
 
   }
 
@@ -194,7 +193,7 @@ function App() {
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
-                      <button onClick={handleRozpatrzona}>Rozpatrzona</button>
+                      <button onClick={ () => handleRozpatrzona(index)}>Rozpatrzona</button>
                     
                     </div>
                   )
