@@ -82,11 +82,10 @@ function App() {
       `)
   }
 
-  const handleRozpatrzona = (item) =>{
+  const handleRozpatrzona = (index) =>{
 
-    const reklamacja = document.getElementsByName[item]
-        console.log(reklamacja)
-
+    const rozpatrzona = document.getElementsByClassName('dane-container')[index];
+    rozpatrzona.classList.toggle('rozpatrzona');
 
   }
 
