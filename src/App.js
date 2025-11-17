@@ -85,6 +85,10 @@ function App() {
 
   const handleRozpatrzona = () =>{
 
+
+    const reklamacja = document.querySelector('.dane-container')
+    reklamacja.classList.toggle('rozpatrzona')
+
   }
 
   const handleUpdate = () =>{
