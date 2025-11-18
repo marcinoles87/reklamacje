@@ -109,14 +109,11 @@ function App() {
 
       Filia : ${filia}
       Podpisał : ${sprzedawca}
-
       Osoba zglaszająca : ${daneZglaszajacego}
       Email : ${emailZglaszajacego} / Telefon : ${tel}
       Opis reklamacji : ${opis}
       Opis oddanego przedmiotu : ${wyglad}
       Żądanie nabywcy : ${zadanie}
-
-
       `)
       })
     
