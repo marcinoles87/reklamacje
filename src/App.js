@@ -65,21 +65,6 @@ function App() {
 
 
 
-    alert(`
-      
-      Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
-
-      Filia : ${filia}
-      Podpisał : ${sprzedawca}
-
-      Osoba zglaszająca : ${daneZglaszajacego}
-      Email : ${emailZglaszajacego} / Telefon : ${tel}
-      Opis reklamacji : ${opis}
-      Opis oddanego przedmiotu : ${wyglad}
-      Żądanie nabywcy : ${zadanie}
-
-
-      `)
   }
 
   const handleRozpatrzona = (index) =>{
@@ -117,7 +102,22 @@ function App() {
         
 
         }).then( () =>{
-        alert('succes');
+        
+    alert(`
+      
+      Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
+
+      Filia : ${filia}
+      Podpisał : ${sprzedawca}
+
+      Osoba zglaszająca : ${daneZglaszajacego}
+      Email : ${emailZglaszajacego} / Telefon : ${tel}
+      Opis reklamacji : ${opis}
+      Opis oddanego przedmiotu : ${wyglad}
+      Żądanie nabywcy : ${zadanie}
+
+
+      `)
       })
     
     
@@ -126,17 +126,14 @@ function App() {
 
   const handleDelete = async (item) =>{
 
-
-    console.log(item)
-
     axios.delete(`http://localhost:8081/delete/${item}`)
     
     setDane(wszystkieDaneBazy.filter( (val) =>{
       return item !== val.Nazwa
     }))
 
-    console.log(item)
     console.log('jestem w srodku delete')
+    alert(`usunięto reklamacje`)
   }
 
   return (
@@ -155,8 +152,8 @@ function App() {
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
 
-              <button onClick={handleShow}>Pokaż zgłoszenia</button>
               <button onClick={handleUpdate}>Dodaj zgłoszenie</button>
+              <button onClick={handleShow}>Pokaż zgłoszenia</button>
 
               <div>
                 <h1>Wszystkie reklamacje</h1>
