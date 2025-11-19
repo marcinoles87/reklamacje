@@ -44,8 +44,6 @@ function App() {
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res.data)
-      
-    
     })
     .catch( err => console.log(err)
     )
@@ -186,6 +184,7 @@ function App() {
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
                       <p>Email klienta : {item.Email}</p>
                       <p>Opis reklamacji : {item.OpisReklamacji}</p>
+                      <p>Rozpatrzona : {item.Rozpatrzona}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
                       <button onClick={ () => handleRozpatrzona(index)}>Rozpatrzona</button>
