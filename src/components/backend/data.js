@@ -34,11 +34,12 @@ app.post('/reklamacje' , (req,res) => {
     const Telefon = req.body.Telefon;
     const Wyglad = req.body.Wyglad;
     const numerReklamacji = req.body.numerReklamacji
+    const Rozpatrzona = req.body.Rozpatrzona
     
 
 
-    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup,DataSporzadzenia,Paragon,Telefon,Wyglad,numerReklamacji) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)" , 
-        [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup,DataSporzadzenia,Paragon,Telefon,Wyglad,numerReklamacji], 
+    db.query("INSERT INTO wydarzenia (Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup,DataSporzadzenia,Paragon,Telefon,Wyglad,numerReklamacji,Rozpatrzona) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" , 
+        [Filia,Podpisał,OsobaZgłaszajaca,Email,OpisReklamacji,Nazwa,Żadanie,Kod,Zakup,DataSporzadzenia,Paragon,Telefon,Wyglad,numerReklamacji,Rozpatrzona], 
         (err , result) => {
             console.log(result);
             if(err) {

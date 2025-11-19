@@ -22,6 +22,7 @@ function App() {
   const [zakup , setZakup] = useState('')
   const [zadanie, setZadanie] = useState('')
   const [wszystkieDaneBazy , setDane] = useState([])
+  const [rozpatrzona , setRozpatrzona] = useState(false)
 
   const [filter , setFilter] = useState('');
 
@@ -99,6 +100,7 @@ function App() {
         Paragon : paragon ,
         Telefon : tel ,
         Wyglad : wyglad ,
+        Rozpatrzona : rozpatrzona,
         
 
         }).then( () =>{
