@@ -172,7 +172,7 @@ function App() {
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
 
-                    <div className='dane-container' key={index}>
+                    <div className={rozpatrzona ? 'dane-container' :'dane-container rozpatrzona'} key={index} >
                       
                       <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {index}</span></p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
