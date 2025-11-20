@@ -66,13 +66,10 @@ function App() {
 
   }
 
-  const handleRozpatrzona = (item) =>{
+  const handleRozpatrzona = (index) =>{
 
-    console.log(item)
-    // const rozpatrzona = document.getElementsByClassName('dane-container')[index];
-    // rozpatrzona.classList.toggle('rozpatrzona');
-
-  axios.put(`http://localhost:8081/update/${item}`)
+    const rozpatrzona = document.getElementsByClassName('dane-container')[index];
+    rozpatrzona.classList.toggle('rozpatrzona');
 
   }
 
@@ -190,7 +187,7 @@ function App() {
                       <p>Rozpatrzona : {item.Rozpatrzona}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
-                      <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
+                      <button onClick={ () => handleRozpatrzona(index)}>Rozpatrzona</button>
                     
                     </div>
                   )

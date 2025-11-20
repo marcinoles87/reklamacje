@@ -70,15 +70,12 @@ app.delete('/delete/:item' , (req,res) =>{
     
 })
 
-app.put('/update/:item' , (req,res) =>{
+app.put('/' , (req,res) =>{
 
-    const item = req.params.item;
-
-    db.query("")
-
-    console.log(req)
+    db.query("ALTER TABLE wydarzenia ADD Filia varchar(255)" , (err,data) =>{
+        console.log(res.json(data))
     })
-
+})
 
 
 app.get( '/' , (req,res) =>{
