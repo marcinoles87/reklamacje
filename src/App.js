@@ -66,10 +66,13 @@ function App() {
 
   }
 
-  const handleRozpatrzona = (index) =>{
+  const handleRozpatrzona = (item) =>{
 
-    const rozpatrzona = document.getElementsByClassName('dane-container')[index];
-    rozpatrzona.classList.toggle('rozpatrzona');
+    console.log(item)
+    // const rozpatrzona = document.getElementsByClassName('dane-container')[index];
+    // rozpatrzona.classList.toggle('rozpatrzona');
+
+  axios.put(`http://localhost:8081/update/${item}`)
 
   }
 
@@ -172,7 +175,7 @@ function App() {
                 {wszystkieDaneBazy.map( (item,index) =>{
                   return(
 
-                    <div className={rozpatrzona ? 'dane-container' :'dane-container rozpatrzona'} key={index} >
+                    <div className={rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
                       <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {index}</span></p>
                       <p>Opis przedmiotu : {item.Wyglad}</p>
@@ -187,7 +190,7 @@ function App() {
                       <p>Rozpatrzona : {item.Rozpatrzona}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
-                      <button onClick={ () => handleRozpatrzona(index)}>Rozpatrzona</button>
+                      <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
                     
                     </div>
                   )
