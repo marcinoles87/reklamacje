@@ -70,11 +70,19 @@ app.delete('/delete/:item' , (req,res) =>{
     
 })
 
-app.put('/' , (req,res) =>{
+app.put('/rozpatrzone/:item' , (req,res) =>{
 
-    db.query("ALTER TABLE wydarzenia ADD Filia varchar(255)" , (err,data) =>{
-        console.log(res.json(data))
-    })
+    const item = req.params.item
+
+    db.query("UPDATE wydarzenia SET Rozpatrzona = true WHERE Email = ? " , item  , 
+      (err,results) => {
+            if(err){
+                console.log(err);
+            }else{
+                 console.log(results);
+            }
+        }
+)
 })
 
 
