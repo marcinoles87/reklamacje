@@ -83,7 +83,8 @@ function App() {
 
   console.log('jestem w srodku')
 
-  axios.post('http://localhost:8081/reklamacje' , 
+  if(emailZglaszajacego !=''){
+     axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
@@ -116,6 +117,11 @@ function App() {
       Żądanie nabywcy : ${zadanie}
       `)
       })
+  }else{
+    alert('uzupełnij pole EMAIL...')
+  }
+
+ 
     
     
     
