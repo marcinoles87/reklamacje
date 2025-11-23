@@ -87,7 +87,7 @@ function App() {
 
   console.log('jestem w srodku')
 
-  if(emailZglaszajacego !=''){
+  if(emailZglaszajacego !==''){
      axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
@@ -180,6 +180,12 @@ function App() {
                   <button onClick={handleFilter}>Znajdz</button>
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
+
+                  if(item.rozpatrzona ===1){
+                    setRozpatrzona(true)
+                  }
+
+                  console.log(rozpatrzona)
                   return(
 
                     <div className={rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
