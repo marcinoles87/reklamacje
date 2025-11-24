@@ -68,12 +68,10 @@ function App() {
 
   const handleRozpatrzona = (item) =>{
 
-    // const rozpatrzona = document.getElementsByClassName('dane-container')[index];
-
-    console.log(item)
-
     axios.put(`http://localhost:8081/rozpatrzone/${item}`)
     // rozpatrzona.classList.toggle('rozpatrzona');
+
+    setRozpatrzona(true)
 
   }
 
@@ -162,7 +160,7 @@ function App() {
               <button onClick={handleUpdate}>Dodaj zgłoszenie</button>
               <button onClick={handleShow}>Pokaż zgłoszenia</button>
 
-              <div>
+              <div className='wszystkie-reklamacje-container'>
                 <h1>Wszystkie reklamacje</h1>
                 <div className='filter-container'>
                   <label>Filia
@@ -181,11 +179,7 @@ function App() {
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
 
-                  if(item.rozpatrzona ===1){
-                    setRozpatrzona(true)
-                  }
-
-                  console.log(rozpatrzona)
+                  
                   return(
 
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
@@ -196,8 +190,7 @@ function App() {
                       <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
                       <p>Filia : <span style={{color:'green',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                       <p>Podpisał : {item.Podpisał}</p>
-                      <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
-                      <p>Email klienta : {item.Email}</p>
+                      <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon} / Email : {item.Email}</p>
                       <p>Opis wady : {item.OpisReklamacji}</p>
                       <p>Stan przedmiotu : {item.Wyglad}</p>
                       <p>Rozpatrzona : {item.Rozpatrzona}</p>
