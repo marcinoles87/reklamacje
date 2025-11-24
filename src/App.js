@@ -191,7 +191,6 @@ function App() {
                     <div className={rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
                       <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {index}</span></p>
-                      <p>Opis przedmiotu : {item.Wyglad}</p>
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                       <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
@@ -199,7 +198,8 @@ function App() {
                       <p>Podpisał : {item.Podpisał}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon}</p>
                       <p>Email klienta : {item.Email}</p>
-                      <p>Opis reklamacji : {item.OpisReklamacji}</p>
+                      <p>Opis wady : {item.OpisReklamacji}</p>
+                      <p>Stan przedmiotu : {item.Wyglad}</p>
                       <p>Rozpatrzona : {item.Rozpatrzona}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
