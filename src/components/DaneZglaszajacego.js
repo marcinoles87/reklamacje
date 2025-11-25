@@ -22,6 +22,7 @@ function DaneZglaszajacego({setDaneZglaszajacego,setEmailZglaszajacego,setTelefo
         </label>
 
       </p>
+      <p> <span style={{fontSize:'10px'}}>Wszelkie dane użyte w formularzu wykorzystywane są w celu kontaktu z klientem , tylko i wyłącznie przez fimre Megapunkt 500</span> </p>
     </div>
   )
 }
