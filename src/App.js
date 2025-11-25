@@ -153,9 +153,9 @@ function App() {
 
 
   
-              <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon} setParagon={setParagon} sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
+              <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon}  sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
-              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup}></DaneProduktu>
+              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup} setParagon={setParagon}></DaneProduktu>
 
               <button onClick={handleUpdate}>Dodaj zgłoszenie</button>
               <button onClick={handleShow}>Pokaż zgłoszenia</button>
