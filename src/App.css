@@ -23,6 +23,17 @@
   padding: 10px;
 }
 
+.dane-head{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+  background-color: red;
+  color:white;
+  
+}
+
 .sprawdzenie{
   display: flex;
   flex-direction: column;
@@ -30,7 +41,7 @@
 }
 
 .rozpatrzona{
-  background-color: #a1ff8e;
+  background-color: hsl(143, 62%, 71%);
 }
 
 /* .dane{
