@@ -107,8 +107,8 @@ function App() {
         
 
         }).then( () =>{
-        
-    alert(`
+        setDodana(true)
+         alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
 
@@ -121,11 +121,12 @@ function App() {
       Żądanie nabywcy : ${zadanie}
       `)
       })
+
   }else{
     alert('uzupełnij pole EMAIL...')
   }
 
-  setDodana(true)
+ 
 
   
 
