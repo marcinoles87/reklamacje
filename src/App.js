@@ -147,6 +147,11 @@ function App() {
     alert(`usunięto reklamacje`)
   }
 
+
+  const handleZamknij = () =>{
+    setDodana(false)
+  }
+
   return (
     <div className="App">
 
@@ -163,9 +168,9 @@ function App() {
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup} setParagon={setParagon}></DaneProduktu>
 
-              {dodanaReklamacja ? <div className='dodano-alert'>
+              {dodanaReklamacja ? <div className={dodanaReklamacja ? 'alert-dodano' : 'dodano'}>
                 <p>Reklamacja dodana pomyślnie</p> 
-                <button>Zamknij</button> 
+                <button onClick={handleZamknij}>Zamknij</button> 
                 </div>
                 : ''}
                 
