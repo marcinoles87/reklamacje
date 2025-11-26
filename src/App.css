@@ -135,8 +135,14 @@ input:hover{
   border-color: var(--inputs-border);
 }
 
-.dodana-alert{
+.dodano-alert{
   display: flex;
   flex-direction: row;
+  width: auto;
+  align-items: center;
+  background-color: #009e57;
+  color: white;
+  border:2px solid black;
+  
 }
 
