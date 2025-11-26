@@ -135,3 +135,8 @@ input:hover{
   border-color: var(--inputs-border);
 }
 
+.dodana-alert{
+  display: flex;
+  flex-direction: row;
+}
+

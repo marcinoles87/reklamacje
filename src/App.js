@@ -24,6 +24,8 @@ function App() {
   const [wszystkieDaneBazy , setDane] = useState([])
   const [rozpatrzona , setRozpatrzona] = useState(false)
 
+  const [dodanaReklamacja , setDodana] = useState(false)
+
   const [filter , setFilter] = useState('');
 
   
@@ -123,6 +125,10 @@ function App() {
     alert('uzupełnij pole EMAIL...')
   }
 
+  setDodana(true)
+
+  
+
  
     
     
@@ -157,6 +163,13 @@ function App() {
               <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
               <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup} setParagon={setParagon}></DaneProduktu>
 
+              {dodanaReklamacja ? <div className='dodano-alert'>
+                <p>Reklamacja dodana pomyślnie</p> 
+                <button>Zamknij</button> 
+                </div>
+                : ''}
+                
+                
               <button onClick={handleUpdate}>Dodaj zgłoszenie</button>
               <button onClick={handleShow}>Pokaż zgłoszenia</button>
 
