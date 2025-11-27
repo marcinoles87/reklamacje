@@ -92,7 +92,7 @@ input{
 
 button{
   width: max-content;
-  padding: 18px;
+  padding: 10px;
   background-color: rgb(49, 49, 245);
   color:white;
   border: none;
@@ -139,6 +139,9 @@ input:hover{
 .alert-dodano{
   position: relative;
   left:auto;
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 10px;
   display: flex;
   flex-direction: row;
   width: auto;

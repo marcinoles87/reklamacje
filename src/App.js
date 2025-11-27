@@ -75,6 +75,8 @@ function App() {
 
     setRozpatrzona(true)
 
+    axios.get('http://localhost:8081')
+
   }
 
   const handleUpdate = () =>{
