@@ -54,8 +54,9 @@ function App() {
   
 
   const handleShow = () => {
-    
-  axios.get('http://localhost:8081')
+
+  
+     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
       console.log(res.data)
@@ -63,6 +64,11 @@ function App() {
     })
     .catch( err => console.log(err)
     )
+  
+    
+ 
+
+
 
 
 
