@@ -46,6 +46,7 @@ function App() {
     axios.get('http://localhost:8081')
     .then( res => {
       console.log(res.data)
+      
     })
     .catch( err => console.log(err)
     )
@@ -53,8 +54,7 @@ function App() {
   
 
   const handleShow = () => {
-
-
+    
   axios.get('http://localhost:8081')
     .then( res => {
       console.log(res)
@@ -74,8 +74,6 @@ function App() {
     // rozpatrzona.classList.toggle('rozpatrzona');
 
     setRozpatrzona(true)
-
-    axios.get('http://localhost:8081')
 
   }
 
