@@ -189,14 +189,6 @@ function App() {
                     <input onChange={ (e) => setFilter(e.target.value)}></input>
                   </label>
 
-                  <label>Data sprzedaży
-                    <input onChange={ (e) => setFilter(e.target.value)}></input>
-                  </label>
-
-                  <label>Sporządził
-                    <input onChange={ (e) => setFilter(e.target.value)}></input>
-                  </label>
-
                   <button onClick={handleFilter}>Znajdz</button>
                 </div>
                 {wszystkieDaneBazy.map( (item,index) =>{
@@ -215,7 +207,7 @@ function App() {
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon} / Email : {item.Email}</p>
                       <p>Opis wady : {item.OpisReklamacji}</p>
                       <p>Stan przedmiotu : {item.Wyglad}</p>
-                      <p>Rozpatrzona : {item.Rozpatrzona}</p>
+                      <p>Rozpatrzona : {item.Rozpatrzona ? 'TAK' : 'NIE'}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
