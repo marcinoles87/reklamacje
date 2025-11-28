@@ -59,7 +59,6 @@ function App() {
   
      axios.get('http://localhost:8081')
     .then( res => {
-      console.log(res)
       console.log(res.data)
             setDane(res.data)
     })
@@ -154,7 +153,6 @@ function App() {
       console.log(err)
     })
     
-
     // console.log('jestem w srodku delete')
     alert(`usunięto reklamacje`)
   }
