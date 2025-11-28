@@ -142,14 +142,22 @@ function App() {
 
     axios.delete(`http://localhost:8081/delete/${item}`)
     
-    setDane(wszystkieDaneBazy.filter( (val) =>{
-      return item !== val.Nazwa
-    }))
+    // setDane(wszystkieDaneBazy.filter( (val) =>{
+    //   return item !== val.Nazwa
+    // }))
 
-    console.log('jestem w srodku delete')
+    axios.get('http://localhost:8081')
+    .then( res => {
+      setDane(res.data)
+    })
+    .catch( err =>{
+      console.log(err)
+    })
+    
+
+    // console.log('jestem w srodku delete')
     alert(`usunięto reklamacje`)
   }
-
 
   const handleZamknij = () =>{
     setDodana(false)
