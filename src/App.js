@@ -29,14 +29,7 @@ function App() {
   const [filter , setFilter] = useState('');
 
   
- const handleFilter = () =>{
-  
-  console.log(wszystkieDaneBazy)
-  const wyselekcjonowaneDane = [...wszystkieDaneBazy];
-  const nowa = wyselekcjonowaneDane.filter( item => item.Filia.includes(filter))
-  setDane(nowa)
 
-}
 
 
   useEffect( () => {
@@ -50,8 +43,16 @@ function App() {
     })
     .catch( err => console.log(err)
     )
-  })
+  },[])
+
+  const handleFilter = () =>{
   
+  console.log(wszystkieDaneBazy)
+  const wyselekcjonowaneDane = [...wszystkieDaneBazy];
+  const nowa = wyselekcjonowaneDane.filter( item => item.Filia.includes(filter))
+  setDane(nowa)
+
+}
 
   const handleShow = () => {
 
@@ -65,13 +66,6 @@ function App() {
     .catch( err => console.log(err)
     )
   
-    
- 
-
-
-
-
-
   }
 
   const handleRozpatrzona = (item) =>{
@@ -80,6 +74,7 @@ function App() {
     // rozpatrzona.classList.toggle('rozpatrzona');
 
     setRozpatrzona(true)
+    
 
   }
 
