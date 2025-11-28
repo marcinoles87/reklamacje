@@ -28,9 +28,6 @@ function App() {
 
   const [filter , setFilter] = useState('');
 
-  
-
-
 
   useEffect( () => {
 
@@ -161,6 +158,8 @@ function App() {
     setDodana(false)
   }
 
+
+
   return (
     <div className="App">
 
@@ -196,9 +195,9 @@ function App() {
 
                   <button onClick={handleFilter}>Znajdz</button>
                 </div>
-                {wszystkieDaneBazy.map( (item,index) =>{
 
-                  
+                {wszystkieDaneBazy.map( (item,index) =>{
+                
                   return(
 
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >

@@ -136,6 +136,8 @@ input:hover{
   border-color: var(--inputs-border);
 }
 
+
+
 .alert-dodano{
   position: relative;
   left:auto;
@@ -149,6 +151,8 @@ input:hover{
   background-color: #009e57;
   color: white;
   border:2px solid black;
+  animation-name: myAnimation;
+  animation-duration: 2s;
   
 }
 
@@ -157,4 +161,19 @@ input:hover{
   
   
 }
+
+@keyframes myAnimation {
+
+  0%{
+    transform: translateX(-100vw);
+  }
+
+  100%{
+    transform: translateX(0px);
+  }
+  
+}
+
+
+
 
