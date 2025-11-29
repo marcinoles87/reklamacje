@@ -69,7 +69,14 @@ function App() {
     axios.put(`http://localhost:8081/rozpatrzone/${item}`)
     // rozpatrzona.classList.toggle('rozpatrzona');
 
-    setRozpatrzona(true)
+    axios.get('http://localhost:8081')
+    .then(
+      res => {
+        setDane(res.data)}
+    ).catch(
+      err =>  {
+        console.log(err)}
+    )
     
 
   }

@@ -146,7 +146,7 @@ input:hover{
   border-radius: 10px;
   display: flex;
   flex-direction: row;
-  width: auto;
+  width: 400px;
   align-items: center;
   background-color: #009e57;
   color: white;
@@ -158,8 +158,6 @@ input:hover{
 
 .dodano{
   left: -100vw;
-  
-  
 }
 
 @keyframes myAnimation {
