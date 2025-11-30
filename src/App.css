@@ -85,9 +85,15 @@ img{
 input{
   margin: 10px;
   padding: 5px;
-  transition: 0.8s ease;
+  transition: 0.7s ease;
   border:none;
   border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+input:hover{
+  background-color: rgb(134, 134, 134);
+  color:white;
+  
 }
 
 button{
@@ -113,11 +119,7 @@ textarea{
   height: 100px;
 }
 
-input:hover{
-  background-color: rgb(89, 89, 89);
-  color:white;
-  
-}
+
 
 .inputCheck{
   background-color: #009e57;
