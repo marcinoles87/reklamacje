@@ -41,7 +41,7 @@
 }
 
 .rozpatrzona{
-  background-color: hsl(143, 62%, 71%);
+  background-color: var(--main-color);
 }
 
 /* .dane{

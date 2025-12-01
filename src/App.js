@@ -67,7 +67,8 @@ function App() {
   const handleRozpatrzona = (item) =>{
 
     axios.put(`http://localhost:8081/rozpatrzone/${item}`)
-    // rozpatrzona.classList.toggle('rozpatrzona');
+
+    
 
     axios.get('http://localhost:8081')
     .then(
@@ -131,13 +132,6 @@ function App() {
     alert('uzupełnij pole EMAIL / TELEFON / KOD PRODUKTU...')
   }
 
- 
-
-  
-
- 
-    
-    
     
   }
 
@@ -209,16 +203,16 @@ function App() {
 
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
-                      <p>Kod / Nazwa : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} , numer reklamacji : {index}</span></p>
-                      <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
+                      <p>Kod / Nazwa : <span style={{color:'#8d007dff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
+                      <p>Data zakupu : <span style={{color:'#60008d',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                       <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
-                      <p>Filia : <span style={{color:'green',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
+                      <p>Filia : <span style={{color:'#60008d',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                       <p>Podpisał : {item.Podpisał}</p>
                       <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca} / Telefon : {item.Telefon} / Email : {item.Email}</p>
                       <p>Opis wady : {item.OpisReklamacji}</p>
                       <p>Stan przedmiotu : {item.Wyglad}</p>
-                      <p>Rozpatrzona : {item.Rozpatrzona ? 'TAK' : 'NIE'}</p>
+                      <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#60008d',fontWeight:'bold'}}>TAK</span> : 'NIE'}</p>
 
                       <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
