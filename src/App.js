@@ -209,7 +209,7 @@ function App() {
 
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
-                      <p>Nazwa : {item.Nazwa} , kod : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} , numer reklamacji : {index}</span></p>
+                      <p>Kod / Nazwa : <span style={{color:'red',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} , numer reklamacji : {index}</span></p>
                       <p>Data zakupu : <span style={{color:'red',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
                       <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                       <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
