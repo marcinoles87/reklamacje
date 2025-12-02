@@ -213,8 +213,9 @@ function App() {
                       <p>Opis wady : {item.OpisReklamacji}</p>
                       <p>Stan przedmiotu : {item.Wyglad}</p>
                       <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
-                        <button onClick={ () => handleDelete(item.Email)}>Delete document</button>
+                        <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
+                      <button>Drukuj</button>
                       </div>
 
                       <div>
