@@ -44,16 +44,14 @@
 }
 
 .rozpatrzona{
-  background-color: var(--main-color);
+  background-color:  #3c415e;
 }
 
 /* .dane{
   margin-left: 30px;
 } */
 
-.wszystkie-dane-container{
-  background-color: aquamarine;
-}
+
 
 .dane{
   margin: 30px;
