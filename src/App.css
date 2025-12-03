@@ -31,17 +31,16 @@
   width: 400px;
   margin: 20px;
   border: 2px solid black;
+  border-radius: 10px;
   padding: 10px;
   display: flex;
   border: 2px solid whitesmoke;
   box-shadow: 5px 10px 20px 4px rgb(71, 70, 70);
-  gap:100px;
+  gap: 40px;
 }
 
-.dane-client p{
+.dane-client {
   text-align: center;
-  font-size: larger;
-  font-weight: bold;
 }
 
 .dane-head{

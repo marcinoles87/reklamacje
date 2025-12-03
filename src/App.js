@@ -209,29 +209,33 @@ function App() {
 
                       </div>
                       <div className='dane-client'>
-                          <p>{item.OsobaZgłaszajaca}</p>
+                          <h2>{item.OsobaZgłaszajaca}</h2>
                           <p>Telefon : {item.Telefon} / Email : {item.Email}</p>
                       </div>
 
                       <div className='dane-product'>
-                     <p>Kod / Nazwa : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
-                      <p>Data zakupu : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
-                      <p>Żądanie : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
-                      <p>Opis wady : {item.OpisReklamacji}</p>
-                      <p>Stan przedmiotu : {item.Wyglad}</p>
-                      <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
-                        <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
-                      <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button>Drukuj</button>
+                        <p>Produkt : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
+                        <p>Data zakupu : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Zakup} </span></p>
+                        <p>Paragon {item.Paragon}</p>
+                        <p>Żądanie : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
+                        <p>Opis wady : {item.OpisReklamacji}</p>
+                        <p>Stan przedmiotu : {item.Wyglad}</p>
+                        <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
+                        
                       </div>
 
                       <div>
                         <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                         <p>Przyjął : {item.Podpisał}</p>
-
-
                       </div>
+
+                        <div>
+                          <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
+                      <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
+                      <button>Drukuj</button>
+                        </div>
+                       
                      
 
                     
