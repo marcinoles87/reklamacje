@@ -61,8 +61,16 @@
   
 }
 
+.dane-buttons button{
+  background-color: white;
+  color:black;
+  transition: 300ms ease;
+}
+
 
 .dane-buttons button:hover{
+  transform: scale(1.1);
+  color:white;
   background: #2a9b39;
 background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 64%, rgba(83, 237, 183, 1) 100%);
 
@@ -76,9 +84,10 @@ background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 
   margin: 30px;
 }
 
-/* .rozpatrzona{
-  background-color:  #3c415e;
-} */
+.rozpatrzona{
+  background: #2A7B9B;
+background: linear-gradient(90deg, rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 100%, rgba(237, 221, 83, 1) 100%);
+}
 
 
 .dane{
@@ -135,7 +144,7 @@ button{
   margin: 10px;
   transition: 0.6s ease;
   cursor: pointer;
-  transition: 300ms ease;
+  transition: 1s ease;
 }
 
 button:hover{
