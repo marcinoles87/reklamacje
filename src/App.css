@@ -61,9 +61,14 @@
   
 }
 
-.dane-buttons button{
-  background: -o-linear-gradient(left, #43e97b 0%, #38f9d7 100%);
+
+.dane-buttons button:hover{
+  background: #2a9b39;
+background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 64%, rgba(83, 237, 183, 1) 100%);
+
 }
+
+
 
 .sprawdzenie{
   display: flex;
@@ -120,7 +125,7 @@ input:hover{
   
 }
 
-/* button{
+button{
   width: max-content;
   padding: 10px;
   background-color: rgb(49, 49, 245);
@@ -130,11 +135,12 @@ input:hover{
   margin: 10px;
   transition: 0.6s ease;
   cursor: pointer;
+  transition: 300ms ease;
 }
 
 button:hover{
   background-color: rgb(0, 0, 134);
-} */
+}
 
 textarea{
   border-radius: 10px;
