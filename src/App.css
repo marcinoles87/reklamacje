@@ -17,13 +17,31 @@
   
 }
 
+.all-item-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 .dane-container{
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
   margin: 20px;
   border: 2px solid black;
   padding: 10px;
   display: flex;
-  flex-direction: row;
+  border: 2px solid whitesmoke;
+  box-shadow: 5px 10px 20px 4px rgb(71, 70, 70);
   gap:100px;
+}
+
+.dane-client p{
+  text-align: center;
+  font-size: larger;
+  font-weight: bold;
 }
 
 .dane-head{
@@ -43,14 +61,9 @@
   margin: 30px;
 }
 
-.rozpatrzona{
+/* .rozpatrzona{
   background-color:  #3c415e;
-}
-
-/* .dane{
-  margin-left: 30px;
 } */
-
 
 
 .dane{

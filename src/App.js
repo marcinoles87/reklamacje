@@ -197,19 +197,26 @@ function App() {
                   <button onClick={handleFilter}>Znajdz</button>
                 </div>
 
-                {wszystkieDaneBazy.map( (item,index) =>{
+                  <div className='all-item-container'>
+                    {wszystkieDaneBazy.map( (item,index) =>{
                 
                   return(
 
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
 
-                      <div>
+                      <div className='dane-img'>
+
+                      </div>
+                      <div className='dane-client'>
+                          <p>{item.OsobaZgłaszajaca}</p>
+                          <p>Telefon : {item.Telefon} / Email : {item.Email}</p>
+                      </div>
+
+                      <div className='dane-product'>
                      <p>Kod / Nazwa : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
                       <p>Data zakupu : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Zakup} </span>/ Paragon {item.Paragon}</p>
-                      <p>Sposób załatwienia reklamacji : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
-                      <p>Osoba zgłaszająca : {item.OsobaZgłaszajaca}</p>
-                      <p>Telefon : {item.Telefon} / Email : {item.Email}</p>
+                      <p>Żądanie : <span style={{color:'blue',borderBottom:'1px solid blue'}}>{item.Żadanie}</span> </p>
                       <p>Opis wady : {item.OpisReklamacji}</p>
                       <p>Stan przedmiotu : {item.Wyglad}</p>
                       <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
@@ -221,7 +228,7 @@ function App() {
                       <div>
                         <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
-                        <p>Podpisał : {item.Podpisał}</p>
+                        <p>Przyjął : {item.Podpisał}</p>
 
 
                       </div>
@@ -232,6 +239,8 @@ function App() {
                     </div>
                   )
                 })}
+                  </div>
+                
               </div>
 
 
