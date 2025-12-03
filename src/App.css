@@ -25,6 +25,13 @@
   align-items: center;
 }
 
+.dane-img{
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  background-color: #009e57;
+}
+
 .dane-container{
   flex-direction: column;
   align-items: center;
@@ -52,6 +59,10 @@
   background-color: red;
   color:white;
   
+}
+
+.dane-buttons button{
+  background: -o-linear-gradient(left, #43e97b 0%, #38f9d7 100%);
 }
 
 .sprawdzenie{
@@ -109,7 +120,7 @@ input:hover{
   
 }
 
-button{
+/* button{
   width: max-content;
   padding: 10px;
   background-color: rgb(49, 49, 245);
@@ -123,7 +134,7 @@ button{
 
 button:hover{
   background-color: rgb(0, 0, 134);
-}
+} */
 
 textarea{
   border-radius: 10px;

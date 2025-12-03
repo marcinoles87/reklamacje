@@ -230,7 +230,7 @@ function App() {
                         <p>Przyjął : {item.Podpisał}</p>
                       </div>
 
-                        <div>
+                        <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
                       <button>Drukuj</button>
