@@ -159,6 +159,10 @@ function App() {
     setDodana(false)
   }
 
+  const handleDrukuj = () =>{
+    console.log('drukuj')
+  }
+
 
 
   return (
@@ -233,7 +237,7 @@ function App() {
                         <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button>Drukuj</button>
+                      <button onClick={handeDrukuj}>Drukuj</button>
                         </div>
                        
                      
