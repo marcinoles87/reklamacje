@@ -50,6 +50,15 @@
   text-align: center;
 }
 
+.dane-client i{
+  margin-top: 20px;
+  margin: 10px;
+}
+
+.fa-circle-user{
+  margin: 20px;
+}
+
 .dane-head{
   display: flex;
   flex-direction: column;

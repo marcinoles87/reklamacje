@@ -210,7 +210,7 @@ function App() {
                       </div>
                       <div className='dane-client'>
                           <h2>{item.OsobaZgłaszajaca}</h2>
-                          <p>Telefon : {item.Telefon} / Email : {item.Email}</p>
+                          <i class="fa-solid fa-phone"></i> {item.Telefon}  <i class="fa-solid fa-envelope"></i> {item.Email}
                       </div>
 
                       <div className='dane-product'>
