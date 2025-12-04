@@ -94,8 +94,8 @@ background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 
 }
 
 .rozpatrzona{
-  background: #2A7B9B;
-background: linear-gradient(90deg, rgba(42, 123, 155, 0.82) 29%, rgba(119, 87, 199, 1) 100%, rgba(83, 186, 237, 1) 38%);
+  background: #020024;
+  background: linear-gradient(90deg, #1092b0 0%, #3a47d5 100%);
 }
 
 
