@@ -44,6 +44,11 @@
   border: 2px solid whitesmoke;
   box-shadow: 5px 10px 20px 4px rgb(71, 70, 70);
   gap: 40px;
+  transition: 0.5s ease;
+}
+
+.dane-container:hover{
+  transform: scale(1.05);
 }
 
 .dane-client {
