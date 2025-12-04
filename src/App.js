@@ -228,7 +228,7 @@ function App() {
                         
                       </div>
 
-                      <div>
+                      <div className='dane-filia'>
                         <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                         <p>Przyjął : {item.Podpisał}</p>
@@ -237,7 +237,7 @@ function App() {
                         <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button onClick={handeDrukuj}>Drukuj</button>
+                      <button onClick={handleDrukuj}>Drukuj</button>
                         </div>
                        
                      

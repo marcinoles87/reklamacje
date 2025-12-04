@@ -34,7 +34,6 @@
 
 .dane-container{
   flex-direction: column;
-  align-items: center;
   width: 400px;
   margin: 20px;
   border: 2px solid black;
@@ -60,9 +59,12 @@
   margin: 10px;
 }
 
-.fa-circle-user{
-  margin: 20px;
+.dane-filia{
+  display: flex;
+  flex-direction: column;
 }
+
+
 
 .dane-head{
   display: flex;
