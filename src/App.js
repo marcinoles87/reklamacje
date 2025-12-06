@@ -210,7 +210,7 @@ function App() {
                       
 
                       <div className='dane-img'>
-
+                        <h2>{item.Filia}</h2>
                       </div>
                       <div className='dane-client'>
                           <h2>{item.OsobaZgłaszajaca}</h2>
