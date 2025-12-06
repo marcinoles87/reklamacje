@@ -54,6 +54,8 @@
   text-align: center;
 }
 
+
+
 .dane-client i{
   margin-top: 20px;
   margin: 10px;
@@ -101,8 +103,15 @@ background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 
 }
 
 .rozpatrzona{
+  color:rgb(143, 141, 141);
   background: #020024;
-  background: linear-gradient(90deg, #1092b0 0%, #3a47d5 100%);
+  background: linear-gradient(90deg, #065162 0%,rgba(4, 68, 66, 0.4) 100%);
+  background: #013d54;
+background: radial-gradient(circle, rgba(1, 61, 84, 1) 0%, rgba(6, 26, 46, 1) 50%, rgba(3, 10, 28, 1) 100%);
+}
+
+.rozpatrzona h2{
+  color:white;
 }
 
 
