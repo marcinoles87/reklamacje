@@ -210,7 +210,7 @@ function App() {
                       
 
                       <div className='dane-img' style={item.Rozpatrzona ? {backgroundColor:'#239b65'} : {backgroundColor:'red',color:'white'}}>
-                        <h2>{item.Filia}</h2>
+                        <h3>{item.Filia}</h3>
                       </div>
                       <div className='dane-client'>
                           <h2>{item.OsobaZgłaszajaca}</h2>

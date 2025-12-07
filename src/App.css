@@ -116,6 +116,10 @@ background: radial-gradient(circle, rgba(1, 61, 84, 1) 0%, rgba(6, 26, 46, 1) 50
   color:white;
 }
 
+.rozpatrzona h3{
+  color:white;
+}
+
 
 .dane{
   margin: 30px;
