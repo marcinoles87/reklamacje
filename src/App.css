@@ -58,8 +58,6 @@
   text-align: center;
 }
 
-
-
 .dane-client i{
   margin-top: 20px;
   margin: 10px;
@@ -147,9 +145,6 @@ img{
   margin: 30px auto;
 }
 
-
-
-
 input{
   margin: 10px;
   padding: 5px;
@@ -223,7 +218,7 @@ textarea{
   color: white;
   border:2px solid black;
   animation-name: myAnimation;
-  animation-duration: 2s;
+  animation-duration: 1s;
   
 }
 

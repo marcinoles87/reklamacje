@@ -209,7 +209,7 @@ function App() {
                     <div className={item.Rozpatrzona ? 'dane-container rozpatrzona' :'dane-container '} key={index} >
                       
 
-                      <div className='dane-img'>
+                      <div className='dane-img' style={item.Rozpatrzona ? {backgroundColor:'#239b65'} : {backgroundColor:'red',color:'white'}}>
                         <h2>{item.Filia}</h2>
                       </div>
                       <div className='dane-client'>
@@ -229,7 +229,7 @@ function App() {
                       </div>
 
                       <div className='dane-filia'>
-                        <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p>
+                        {/* <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p> */}
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
                         <p>Przyjął : {item.Podpisał}</p>
                       </div>
