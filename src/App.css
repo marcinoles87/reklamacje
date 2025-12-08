@@ -45,6 +45,7 @@
   padding: 10px;
   display: flex;
   border: 2px solid whitesmoke;
+  background-color: white;
   box-shadow: 5px 10px 20px 4px rgb(71, 70, 70);
   gap: 40px;
   transition: 0.5s ease;
