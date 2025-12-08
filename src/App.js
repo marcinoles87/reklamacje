@@ -203,6 +203,7 @@ function App() {
 
                   <div className='all-item-container'>
                     {wszystkieDaneBazy.map( (item,index) =>{
+
                 
                   return(
 
@@ -231,6 +232,7 @@ function App() {
                       <div className='dane-filia'>
                         {/* <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p> */}
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
+                        <p>Należy rozpatrzyć do dnia : {item.DataSporzadzenia}</p>
                         <p>Przyjął : {item.Podpisał}</p>
                       </div>
 
