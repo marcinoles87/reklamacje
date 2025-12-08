@@ -86,9 +86,16 @@ function App() {
 
   const dataDzis = new Date(); 
   const dzien = dataDzis.getDate();
-  const miesiac = dataDzis.getDate();
+  const miesiac = dataDzis.getMonth()+1;
   const rok = dataDzis.getFullYear();
   const dataSporzadzenia = `${dzien}-${miesiac}-${rok}`
+
+  const dataRozpatrzenia = `${dzien+14}-${miesiac}-${rok}`
+
+  console.log(dataRozpatrzenia)
+  console.log(dzien)
+  console.log(miesiac)
+
 
   console.log('jestem w srodku')
 
@@ -215,7 +222,7 @@ function App() {
                       </div>
                       <div className='dane-client'>
                           <h2>{item.OsobaZgłaszajaca}</h2>
-                          <i class="fa-solid fa-phone"></i> {item.Telefon}  <i class="fa-solid fa-envelope"></i> {item.Email}
+                          <i className="fa-solid fa-phone"></i> {item.Telefon}  <i className="fa-solid fa-envelope"></i> {item.Email}
                       </div>
 
                       <div className='dane-product'>
