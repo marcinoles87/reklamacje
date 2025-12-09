@@ -20,6 +20,7 @@ const db = mysql.createConnection({
 app.post('/reklamacje' , (req,res) => {
 
 
+    console.log(req.body.DataRozpatrzenia)
     const Filia = req.body.Filia;
     const Podpisał = req.body.Podpisał;
     const OsobaZgłaszajaca = req.body.OsobaZgłaszajaca;
