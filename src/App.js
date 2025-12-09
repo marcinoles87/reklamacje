@@ -99,7 +99,8 @@ function App() {
 
   console.log('jestem w srodku')
 
-  if(emailZglaszajacego !=='' && tel !==''){
+  if(emailZglaszajacego !=='' && tel !=='' && kod !==''
+  ){
      axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,
