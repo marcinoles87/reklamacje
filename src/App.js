@@ -116,6 +116,8 @@ function App() {
         Telefon : tel ,
         Wyglad : wyglad ,
         Rozpatrzona : rozpatrzona,
+        DataRozpatrzenia : dataRozpatrzenia,
+
         
 
         }).then( () =>{
