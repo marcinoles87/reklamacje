@@ -92,13 +92,6 @@ function App() {
 
   const dataRozpatrzenia = `${dzien+14}-${miesiac}-${rok}`
 
-  console.log(dataRozpatrzenia)
-  console.log(dzien)
-  console.log(miesiac)
-
-
-  console.log('jestem w srodku')
-
   if(emailZglaszajacego !=='' && tel !=='' && kod !==''
   ){
      axios.post('http://localhost:8081/reklamacje' , 
@@ -118,10 +111,8 @@ function App() {
         Wyglad : wyglad ,
         Rozpatrzona : rozpatrzona,
         DataRozpatrzenia : dataRozpatrzenia,
-
-        
-
-        }).then( () =>{
+        })
+        .then( () =>{
         setDodana(true)
          alert(`
       
@@ -140,10 +131,7 @@ function App() {
 
   }else{
     alert('uzupełnij pole EMAIL / TELEFON / KOD PRODUKTU...')
-  }
-
-    
-  }
+  }}
 
   const handleDelete = async (item) =>{
 
@@ -161,7 +149,6 @@ function App() {
       console.log(err)
     })
     
-    // console.log('jestem w srodku delete')
     alert(`usunięto reklamacje`)
   }
 
@@ -172,8 +159,6 @@ function App() {
   const handleDrukuj = () =>{
     console.log('drukuj')
   }
-
-
 
   return (
     <div className="App">
