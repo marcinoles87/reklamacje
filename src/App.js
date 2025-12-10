@@ -169,17 +169,19 @@ function App() {
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
       <p>Produkt powinien być względnie wyczyszczony , bez resztek jedzenia / napojów .</p>
       </div>
+      
+            <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon}  sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
+            <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
+            <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup} setParagon={setParagon}></DaneProduktu>
 
-
-  
-              <DaneFirmy filia={filia} setFilia={setFilia} paragon={paragon}  sprzedawca={sprzedawca} setSprzedawca={setSprzedawca}></DaneFirmy>
-              <DaneZglaszajacego setDaneZglaszajacego={setDaneZglaszajacego} setEmailZglaszajacego={setEmailZglaszajacego} setTelefon={setTelefon} setZadanie={setZadanie}></DaneZglaszajacego>
-              <DaneProduktu setKod={setKod} setNazwa={setNazwa} setOpis={setOpis} setWyglad={setWyglad} setZakup={setZakup} setParagon={setParagon}></DaneProduktu>
-
-              {dodanaReklamacja ? <div className={dodanaReklamacja ? 'alert-dodano' : 'dodano'}>
+              {dodanaReklamacja ? 
+              
+              <div className={dodanaReklamacja ? 'alert-dodano' : 'dodano'}>
                 <p>Reklamacja dodana pomyślnie</p> 
                 <button onClick={handleZamknij}>Zamknij</button> 
-                </div>
+
+              </div>
+
                 : ''}
                 
                 
@@ -196,7 +198,7 @@ function App() {
                   <button onClick={handleFilter}>Znajdz</button>
                 </div>
 
-                  <div className='all-item-container'>
+              <div className='all-item-container'>
                     {wszystkieDaneBazy.map( (item,index) =>{
 
                 
@@ -221,7 +223,7 @@ function App() {
                         <p>Opis wady : {item.OpisReklamacji}</p>
                         <p>Stan przedmiotu : {item.Wyglad}</p>
                         <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
-                        
+
                       </div>
 
                       <div className='dane-filia'>
