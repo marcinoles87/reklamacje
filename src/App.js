@@ -242,7 +242,7 @@ function App() {
                       <div className='dane-filia'>
                         {/* <p>Filia : <span style={{color:'#00dd90ff',fontWeight:'bold',fontSize:'20px'}}>{item.Filia}</span></p> */}
                         <p>Data sporządzenia reklamacji: {item.DataSporzadzenia}</p>
-                        <p>Należy rozpatrzyć do dnia : {item.DataRozpatrzenia}</p>
+                        <p>Należy rozpatrzyć do dnia : <span style={{color:'red'}}>{item.DataRozpatrzenia}</span> </p>
                         <p>Przyjął : {item.Podpisał}</p>
                       </div>
 
