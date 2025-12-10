@@ -49,6 +49,7 @@
   box-shadow: 5px 10px 20px 4px rgb(71, 70, 70);
   gap: 40px;
   transition: 0.5s ease;
+background: linear-gradient(115deg, #ffffff, #dddddd);
 }
 
 .dane-container:hover{
@@ -94,8 +95,7 @@
   transform: scale(1.1);
   color:white;
   background: #2a9b39;
-background: linear-gradient(90deg, rgba(42, 155, 57, 1) 0%, rgba(5, 255, 13, 1) 64%, rgba(83, 237, 183, 1) 100%);
-
+background: linear-gradient(115deg, #70f570, #49c628);
 }
 
 
