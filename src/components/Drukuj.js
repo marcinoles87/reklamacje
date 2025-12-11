@@ -2,7 +2,7 @@ import React from 'react'
 
 function Drukuj() {
   return (
-    <div>Drukuj</div>
+    <div className='druk-container'>Witamy w strefie druku reklamacji nr :</div>
   )
 }
 

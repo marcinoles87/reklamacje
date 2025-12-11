@@ -4,6 +4,10 @@ import './App.css';
 import DaneFirmy from './components/DaneFirmy';
 import DaneProduktu from './components/DaneProduktu';
 import DaneZglaszajacego from './components/DaneZglaszajacego';
+import Drukuj from './components/Drukuj'
+
+import { Link, Routes } from 'react-router';
+import { Route } from 'react-router';
 
 import logo from './components/img/logoMp.jpg'
 
@@ -163,7 +167,10 @@ function App() {
   return (
     <div className="App">
 
-      <div className='dane'>
+<Routes>
+    <Route path='*' element={
+    <>
+    <div className='dane'>
       <img src={logo} alt=""></img>
       <h3>FORMULARZ REKLMACYJNY</h3>
       <p>Prosimy o wypełnienie wszystkich wymaganych pól. </p>
@@ -236,7 +243,7 @@ function App() {
                         <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button onClick={handleDrukuj}>Drukuj</button>
+                      <button onClick={handleDrukuj}><Link to={'/drukuj'}>Drukuj</Link></button>
                         </div>
                        
                      
@@ -250,7 +257,16 @@ function App() {
                 
               </div>
 
+                  </>
 
+        }
+    />
+
+    <Route path='/drukuj' element={<Drukuj></Drukuj>}></Route>
+
+      </Routes>
+
+      
       
       
     </div>
