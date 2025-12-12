@@ -178,6 +178,10 @@ button{
   transition: 1s ease;
 }
 
+button a{
+  text-decoration: none;
+}
+
 button:hover{
   background-color: rgb(0, 0, 134);
 }
