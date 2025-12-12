@@ -31,6 +31,7 @@ function App() {
   const [dodanaReklamacja , setDodana] = useState(false)
 
   const [filter , setFilter] = useState('');
+  const [elementDruku , setElementDruku] = useState([])
 
 
   useEffect( () => {
@@ -160,8 +161,9 @@ function App() {
     setDodana(false)
   }
 
-  const handleDrukuj = () =>{
-    console.log('drukuj')
+  const handleDrukuj = (item) =>{
+    setElementDruku(item)
+    console.log(elementDruku)
   }
 
   return (
@@ -243,7 +245,7 @@ function App() {
                         <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button onClick={handleDrukuj}><Link to={'/drukuj'}>Drukuj</Link></button>
+                      <button ><Link onClick={ () => handleDrukuj(item)}  to={'/drukuj'}>Drukuj</Link></button>
                         </div>
                        
                      
