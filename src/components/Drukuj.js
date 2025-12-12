@@ -7,6 +7,7 @@ function Drukuj({item}) {
       Witamy w strefie druku reklamacji nr :
 
             <div className='dane-product'>
+                        <p>{item.OsobaZgłaszajaca}</p>
                         <p>Produkt : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
                         <p>Data zakupu : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Zakup} </span></p>
                         <p>Paragon {item.Paragon}</p>
