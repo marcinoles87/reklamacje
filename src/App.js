@@ -264,7 +264,7 @@ function App() {
         }
     />
 
-    <Route path='/drukuj' element={<Drukuj></Drukuj>}></Route>
+    <Route path='/drukuj' element={<Drukuj item={elementDruku}></Drukuj>}></Route>
 
       </Routes>
 
