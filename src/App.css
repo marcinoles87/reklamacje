@@ -246,6 +246,21 @@ textarea{
   left: -100vw;
 }
 
+.druk-container{
+  margin: 20px;
+}
+
+.druk-container h2{
+  margin:10px auto;
+}
+
+.druk-podpis{
+  margin: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 @keyframes myAnimation {
 
   0%{

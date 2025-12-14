@@ -4,7 +4,7 @@ function Drukuj({item}) {
   console.log(item)
   return (
     <div className='druk-container'>
-      Witamy w strefie druku reklamacji nr :
+      Witamy w strefie druku reklamacji nr    _______________:
 
           
             <div>
@@ -30,6 +30,11 @@ function Drukuj({item}) {
               <p>Opis wady : {item.OpisReklamacji}</p>
               <p>Stan przedmiotu : {item.Wyglad}</p>
               <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
+            </div>
+
+            <div className='druk-podpis'>
+              <p>Sporządził</p>
+              <p>Podpis Klienta</p>
             </div>
 
 
