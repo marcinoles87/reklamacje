@@ -4,8 +4,6 @@ function Drukuj({item}) {
   console.log(item)
   return (
     <div className='druk-container'>
-      Witamy w strefie druku reklamacji nr    _______________:
-
           
             <div>
               <h2>Dane firmy</h2>
