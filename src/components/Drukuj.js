@@ -6,16 +6,19 @@ function Drukuj({item}) {
     <div className='druk-container'>
       Witamy w strefie druku reklamacji nr :
 
-            <div className='dane-client'>
-                <h2>{item.OsobaZgłaszajaca}</h2>
-                <i className="fa-solid fa-phone"></i> {item.Telefon}  <i className="fa-solid fa-envelope"></i> {item.Email}
-            </div>
-
+          
             <div>
               <h2>Dane firmy</h2>
               <p>Filia : {item.Filia}</p>
-               <p>Data sporządzenia reklamacji : {item.DataSporzadzenia}</p>
+              <p>Data sporządzenia reklamacji : {item.DataSporzadzenia}</p>
+              <p>Należy rozpatrzyć do dnia : {item.DataRozpatrzenia}</p>
               <p>Sporządził : {item.Podpisał}</p>
+            </div>
+
+            <div>
+              <h2>Dane klienta</h2>
+                <p>{item.OsobaZgłaszajaca}/</p>
+                <i className="fa-solid fa-phone"></i> {item.Telefon}  <i className="fa-solid fa-envelope"></i> {item.Email}
             </div>
 
             <div className='dane-product'>
