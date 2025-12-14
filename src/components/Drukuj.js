@@ -17,8 +17,9 @@ function Drukuj({item}) {
 
             <div>
               <h2>Dane klienta</h2>
-                <p>{item.OsobaZgłaszajaca}/</p>
-                <i className="fa-solid fa-phone"></i> {item.Telefon}  <i className="fa-solid fa-envelope"></i> {item.Email}
+                <p>{item.OsobaZgłaszajaca}</p>
+                <i className="fa-solid fa-phone"></i> {item.Telefon} <br></br> 
+                <i className="fa-solid fa-envelope"></i> {item.Email}
             </div>
 
             <div className='dane-product'>
@@ -26,7 +27,7 @@ function Drukuj({item}) {
               <p>Produkt : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Kod} / {item.Nazwa} </span></p>
               <p>Data zakupu : <span style={{color:'#00dd90ff',fontWeight:'bold'}}>{item.Zakup} </span></p>
               <p>Paragon {item.Paragon}</p>
-              <p>Żądanie : <span style={{color:'rgba(0, 223, 134, 1)'}}>{item.Żadanie}</span> </p>
+              <p>Żądanie : <span style={{color:'rgba(0, 223, 134, 1)' , fontWeight:'bold'}}>{item.Żadanie}</span> </p>
               <p>Opis wady : {item.OpisReklamacji}</p>
               <p>Stan przedmiotu : {item.Wyglad}</p>
               <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
