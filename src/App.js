@@ -198,7 +198,6 @@ function App() {
               <button onClick={handleShow}>Pokaż zgłoszenia</button>
 
               <div className='wszystkie-reklamacje-container'>
-                <h1>Wszystkie reklamacje</h1>
                 <div className='filter-container'>
                   <label>Filia
                     <input onChange={ (e) => setFilter(e.target.value)}></input>
