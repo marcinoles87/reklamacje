@@ -173,9 +173,8 @@ button{
   border: none;
   border-radius: 10px;
   margin: 10px;
-  transition: 0.6s ease;
   cursor: pointer;
-  transition: 1s ease;
+  transition: 0.6s ease;
 }
 
 button a{
@@ -193,7 +192,7 @@ background: linear-gradient(115deg, #70f570, #49c628);
 }
 
 button:hover{
-  background-color: rgb(0, 0, 134);
+  background-color: rgb(0, 0, 84);
 }
 
 textarea{
