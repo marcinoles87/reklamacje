@@ -45,7 +45,7 @@ function App() {
     })
     .catch( err => console.log(err)
     )
-  },[])
+  },[wszystkieDaneBazy])
 
   const handleFilter = () =>{
   
