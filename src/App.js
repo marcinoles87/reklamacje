@@ -45,7 +45,7 @@ function App() {
     })
     .catch( err => console.log(err)
     )
-  },[wszystkieDaneBazy])
+  },[])
 
   const handleFilter = () =>{
   
@@ -244,7 +244,7 @@ function App() {
                         <div className='dane-buttons'>
                           <button onClick={ () => handleDelete(item.Email)}>Usuń</button>
                       <button onClick={ () => handleRozpatrzona(item.Email)}>Rozpatrzona</button>
-                      <button ><Link style={{width:'100%' , height:'100%' , display:'block'}} onClick={ () => handleDrukuj(item)}  to={'/drukuj'}>Drukuj</Link></button>
+                      <button ><Link onClick={ () => handleDrukuj(item)}  to={'/drukuj'}>Drukuj</Link></button>
                         </div>
                        
                      
