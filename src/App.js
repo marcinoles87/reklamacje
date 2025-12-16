@@ -138,6 +138,14 @@ function App() {
     alert('uzupełnij pole EMAIL / TELEFON / KOD PRODUKTU...')
   }}
 
+   axios.get('http://localhost:8081')
+    .then( res => {
+      console.log(res.data)
+            setDane(res.data)
+    })
+    .catch( err => console.log(err)
+    )
+
   const handleDelete = async (item) =>{
 
     axios.delete(`http://localhost:8081/delete/${item}`)
