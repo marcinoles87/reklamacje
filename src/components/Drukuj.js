@@ -2,6 +2,10 @@ import React from 'react'
 
 function Drukuj({item}) {
   console.log(item)
+
+  const handlePrint = () =>{
+    window.print()
+  }
   return (
     <div className='druk-container'>
           
@@ -29,6 +33,8 @@ function Drukuj({item}) {
               <p>Opis wady : {item.OpisReklamacji}</p>
               <p>Stan przedmiotu : {item.Wyglad}</p>
               <p>Rozpatrzona : {item.Rozpatrzona ? <span style={{fontSize:'20px',color:'#00dd90ff',fontWeight:'bold'}}>TAK</span> : <span style={{color:'red'}}>'NIE'</span> }</p>
+
+              <button onClick={handlePrint}>Druk</button>
             </div>
 
             <div className='druk-podpis'>

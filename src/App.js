@@ -72,9 +72,6 @@ function App() {
   const handleRozpatrzona = async (item) =>{
 
     axios.put(`http://localhost:8081/rozpatrzone/${item}`)
-
-    
-
     axios.get('http://localhost:8081')
     .then(
       res => {
