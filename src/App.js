@@ -69,7 +69,7 @@ function App() {
   
   }
 
-  const handleRozpatrzona = (item) =>{
+  const handleRozpatrzona = async (item) =>{
 
     axios.put(`http://localhost:8081/rozpatrzone/${item}`)
 
@@ -136,7 +136,7 @@ function App() {
 
   }else{
     alert('uzupełnij pole EMAIL / TELEFON / KOD PRODUKTU...')
-  }}
+  }
 
    axios.get('http://localhost:8081')
     .then( res => {
@@ -145,6 +145,11 @@ function App() {
     })
     .catch( err => console.log(err)
     )
+
+  
+
+
+}
 
   const handleDelete = async (item) =>{
 
