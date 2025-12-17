@@ -96,6 +96,9 @@ function App() {
 
   if(emailZglaszajacego !=='' && tel !=='' && kod !==''
   ){
+
+    document.querySelector('input').classList.toggle('red')
+
      axios.post('http://localhost:8081/reklamacje' , 
         {
         Filia : filia ,

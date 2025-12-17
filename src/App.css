@@ -260,6 +260,11 @@ textarea{
   justify-content: space-between;
 }
 
+.red{
+  color:red;
+  border: 2px solid red;
+}
+
 @keyframes myAnimation {
 
   0%{
