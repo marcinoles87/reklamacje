@@ -84,7 +84,7 @@ function App() {
 
   }
 
-  const handleUpdate = () =>{
+  const handleUpdate = async () =>{
 
   const dataDzis = new Date(); 
   const dzien = dataDzis.getDate();
