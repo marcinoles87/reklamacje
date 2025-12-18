@@ -119,6 +119,16 @@ function App() {
         })
         .then( () =>{
         setDodana(true)
+
+        axios.get('http://localhost:8081')
+    .then( res => {
+      console.log(res.data)
+            setDane(res.data)
+    })
+    .catch( err => console.log(err)
+    )
+
+
          alert(`
       
       Twoje zgłoszenie reklamacyjne zostało wysłane ! mamy 14 dni na rozpatrzenie , prosimy o cierpliwość .
@@ -138,13 +148,7 @@ function App() {
     alert('uzupełnij pole EMAIL / TELEFON / KOD PRODUKTU...')
   }
 
-   axios.get('http://localhost:8081')
-    .then( res => {
-      console.log(res.data)
-            setDane(res.data)
-    })
-    .catch( err => console.log(err)
-    )
+   
 
   
 
