@@ -158,18 +158,22 @@ function App() {
   const handleDelete = async (item) =>{
 
     axios.delete(`http://localhost:8081/delete/${item}`)
-    
-    // setDane(wszystkieDaneBazy.filter( (val) =>{
-    //   return item !== val.Nazwa
-    // }))
+    .then( () => {
 
-    axios.get('http://localhost:8081')
+       axios.get('http://localhost:8081')
     .then( res => {
       setDane(res.data)
     })
     .catch( err =>{
       console.log(err)
     })
+    })
+    
+    // setDane(wszystkieDaneBazy.filter( (val) =>{
+    //   return item !== val.Nazwa
+    // }))
+
+   
     
     alert(`usunięto reklamacje`)
   }
