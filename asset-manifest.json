@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/reklamacje/static/css/main.7cf45b2b.css",
+    "main.js": "/reklamacje/static/js/main.8a0af555.js",
+    "static/media/logoMp.jpg": "/reklamacje/static/media/logoMp.c57305186b440012203e.jpg",
+    "index.html": "/reklamacje/index.html",
+    "main.7cf45b2b.css.map": "/reklamacje/static/css/main.7cf45b2b.css.map",
+    "main.8a0af555.js.map": "/reklamacje/static/js/main.8a0af555.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7cf45b2b.css",
+    "static/js/main.8a0af555.js"
+  ]
+}
