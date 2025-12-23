@@ -38,7 +38,7 @@ function App() {
 
     console.log('pierwszy effect')
 
-    axios.get('http://localhost:8081')
+    axios.get('http://localhost:443')
     .then( res => {
       console.log(res.data)
       
@@ -59,7 +59,7 @@ function App() {
   const handleShow = () => {
 
   
-     axios.get('http://localhost:8081')
+     axios.get('http://localhost:443')
     .then( res => {
       console.log(res.data)
             setDane(res.data)
@@ -71,8 +71,8 @@ function App() {
 
   const handleRozpatrzona = async (item) =>{
 
-    axios.put(`http://localhost:8081/rozpatrzone/${item}`)
-    axios.get('http://localhost:8081')
+    axios.put(`http://localhost:443/rozpatrzone/${item}`)
+    axios.get('http://localhost:443')
     .then(
       res => {
         setDane(res.data)}
@@ -99,7 +99,7 @@ function App() {
 
     document.querySelector('input').classList.toggle('red')
 
-     axios.post('http://localhost:8081/reklamacje' , 
+     axios.post('http://localhost:443/reklamacje' , 
         {
         Filia : filia ,
         Podpisał : sprzedawca ,
@@ -120,7 +120,7 @@ function App() {
         .then( () =>{
         setDodana(true)
 
-        axios.get('http://localhost:8081')
+        axios.get('http://localhost:443')
     .then( res => {
       console.log(res.data)
             setDane(res.data)
@@ -157,13 +157,13 @@ function App() {
 
   const handleDelete = async (item) =>{
 
-    axios.delete(`http://localhost:8081/delete/${item}`)
+    axios.delete(`http://localhost:443/delete/${item}`)
     
     // setDane(wszystkieDaneBazy.filter( (val) =>{
     //   return item !== val.Nazwa
     // }))
 
-    axios.get('http://localhost:8081')
+    axios.get('http://localhost:443')
     .then( res => {
       setDane(res.data)
     })
