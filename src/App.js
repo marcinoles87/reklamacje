@@ -38,7 +38,7 @@ function App() {
 
     console.log('pierwszy effect')
 
-    axios.get('http://localhost:443')
+    axios.get('https://reklamacje-ol74.onrender.com')
     .then( res => {
       console.log(res.data)
       
