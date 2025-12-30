@@ -100,6 +100,6 @@ app.get( '/' , (req,res) =>{
 })
 
 
-app.listen(443, () =>{
+app.listen('https://reklamacje-ol74.onrender.com', () =>{
     console.log('nasluchuje')
 })
