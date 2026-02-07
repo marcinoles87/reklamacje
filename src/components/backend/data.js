@@ -10,10 +10,10 @@ app.use(express.json());
 
 
 const db = mysql.createConnection({
-    host: "s31.cyber-folks.pl",
-    user: "v55582726",
-    password: "megapunkt500" ,
-    database : "v55582726_viptour"
+    host: process.env.REACT_APP_API_HOST,
+    user: process.env.REACT_APP_API_USER,
+    password: process.env.REACT_APP_API_PASSWORD,
+    database : process.env.REACT_APP_API_DATABASE,
 })
 
 
